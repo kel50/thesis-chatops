@@ -1,0 +1,35 @@
+% \chapter*{Empirische Grundlagen} \label{empg}
+% \input{Grundlagen/emp_Anforderungsmanagement.tex}
+% \input{Grundlagen/emp_Qualitative_Inhaltsanalyse.tex}
+% \input{Grundlagen/emp_Experteninterview.tex}
+
+
+\chapter{Grundlagen} \label{theg}
+\input{Grundlagen/the_Chat.tex}
+\input{Grundlagen/the_CMDB.tex}
+
+
+\section{Python}
+%\footcite[Vgl.][o. \pno]{Norton_2005_Python}
+%\footcite[Vgl.][o. \pno]{Sumit_2019_Python_Chatbots}
+Python ist eine universelle Programmiersprache, die auf vielen Betriebssystemen, wie Windows, Linux oder macOS läuft. Sie gilt als leicht zu erlernen und bietet objektorientierte Features. Sie wurde 1989 von Guido van Rossum als Nachfolger der Sprache \textit{ABC} entwickelt. Der Name ist angelehnt an die Fernsehsendung \textit{Monty Python's Flying Circus}.\\
+Durch die \textit{batteries included} Philosophie sind viele Features schon in Python integriert.
+\footcite[Vgl.][1\psqq]{Gowrishankar_2019_Python}
+
+Um zusätzliche Module zu verwenden, wird empfohlen eine virtuelle Umgebung (\textit{virtualenv}) zu verwenden. So können Konflikte vermieden werden, wenn Tools Module in unterschiedlichen Versionen benötigen. Braucht z. B. ein Tool \textit{A} das Modul \textit{M} in der Version \textit{1.0} und ein Tool \textit{B} selbiges in der Version \textit{2.0}, so kann für jedes Tool ein eigenes \textit{virtualenv} angelegt werden. Auch Updates können in den Umgebungen getrennt von einander erfolgen.\\
+Für gewöhnlich stellen Tools eine \textit{requirements.txt} Datei bereit, in der benötigte Module und deren Versionen vermerkt sind. Ein Beispiel ist in \autoref{requirements} zu finden.
+\footcite[Vgl.][o. \pno]{Python_venv}
+
+\begin{lstlisting}[language=python, label=requirements, caption=Beispiel requirements.txt]
+novas==3.1.1.3
+numpy==1.9.2
+requests==2.7.0
+\end{lstlisting}
+
+
+\section{\acl{API}}
+Eine \acs{API} ist eine Programmierschnittstelle, um Informationen auf standardisiertem Weg auszutauschen. Daten und Befehle werden strukturiert und in einer festgelegten Syntax übergeben.\\
+Der Einsatz einer \acs{API} erlaubt die Modularisierung von Programmen, lediglich die Schnittstellen der Programmmodeule müssen spezifiziert sein. Außerdem bietet eine unveränderte \acs{API} eine hohe Stabilität auf lange Sicht, während der Quellcode darunter beliebig verändert werden kann.\\
+Häufig verwendet werden werden APIs bei Online-Shops oder Content-Management-Systemen, z. B. um Bezahldienstleister, Bewertungssysteme oder Versanddienstleister anzubinden.
+\footcite[Vgl.][o. \pno]{Luber_2017_API}
+

@@ -1,0 +1,41 @@
+\documentclass[a4paper,11.5pt]{report}
+
+
+\input{settings/packages}
+\input{settings/titel}
+\input{settings/macros}
+\input{settings/page}
+\input{settings/bib}
+\input{settings/pdf}
+
+%addbibresource
+
+\begin{document}
+\input{./00_Titelseite.tex}
+\pagestyle{fancy}
+\pagenumbering{Roman} %Für Verzeichnisse römische Nummerierung
+\setcounter{page}{2} %Seitenzähler zurücksetzen
+%\newgeometry{left=4cm,right=2cm, top=4cm, bottom=2cm}
+\newgeometry{left=4cm,right=2cm, top=3cm, bottom=2cm}
+\reversemarginpar % todonotes auf der linken Seite
+
+\cleardoublepage\pdfbookmark{\contentsname}{toc}\tableofcontents \newpage %Inhaltsverzeichnis
+\input{./acronyme.tex} %Abkürzungsverzeichnis
+\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{\listfigurename}\listoffigures %Abbildungsverzeichnis
+\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{\listtablename}\listoftables %Tabellenverzeichnis
+\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{\lstlistlistingname}\lstlistoflistings %Listings
+\newpage\listoftodos\newpage
+\pagenumbering{arabic} %Für Inhalt arabische Nummerierung
+\setcounter{page}{1} %Seitenzähler zurücksetzen
+
+\input{./01_Einleitung.tex}
+\input{./02_Grundlagen.tex}
+\input{./03_AnfA.tex}
+\input{./04_Praxis.tex}
+\input{./05_Fazit.tex}
+\input{./bibliography.tex} %Quellenverzeichnis
+\input{./99_Anhang.tex} %Anhang
+\input{./eidesse.tex} %Eidesstattliche Erklärung
+
+
+\end{document}

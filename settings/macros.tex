@@ -1,0 +1,36 @@
+\newcommand*{\quelle}{%
+  ~\\\smallskip\footnotesize Quelle: \cite
+%  \footnotesize Quelle: \cite
+%  \footcites
+}
+
+\newcommand*{\quelleeigen}{%
+  ~\\\smallskip\footnotesize Quelle: Eigene Abbildung nach: \cites
+%  \footnotesize Quelle: Eigene Abbildung nach: \cites
+%  \footnotesize (Quelle: Eigene Abbildung nach: \cite[#1]{#2})
+}
+
+\newcommand*{\eigen}{%
+  ~\\\smallskip\footnotesize Quelle: Eigene Darstellung
+  %\footnotesize Quelle: Eigene Darstellung
+}
+
+
+
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} %Für Titelseite
+\newcommand{\hsp}{\hspace{20pt}} %Für Chapter Überschriften
+\newcommand{\note}[2][]{\todo[color={red!100!green!33}, #1]{#2}}
+\newcommand{\question}[2][]{\todo[color=green, #1]{#2}}
+\newcommand{\dotoday}[2][]{\todo[color=red, #1]{#2}}
+\newcommand{\todoin}[2][]{\todo[inline, #1] {#2}}
+\newcommand{\nicetohave}[2][]{\todo[color=blue!30, #1]{#2}}
+
+% \presetkeys%
+%     {todonotes}%
+%     {inline}{}
+%
+
+\immediate\write18{texcount -inc -incbib -sum -total -nosub 01_Einleitung.tex 02_Grundlagen.tex 03_Hauptkapitel.tex 04_Betriebswirtschaftliche_Betrachtung.tex 05_Fazit.tex > /tmp/wordcount.tex}
+\newcommand\wordcount{
+\verbatiminput{/tmp/wordcount.tex}}

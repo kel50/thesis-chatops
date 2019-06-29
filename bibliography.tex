@@ -1,0 +1,23 @@
+%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+
+%\begin{thebibliography}{1}
+%\bibitem[Frank 04]{Kurs1} \emph{Erste Schritte mit \LaTeX},
+%Sascha Frank 2004
+%\bibitem[Frank 05]{kurz1} \emph{Kurzdokumentation zu Kurs 1}
+%Sascha Frank 2005
+%\bibitem{norman} E. H. Norman {\em Japan's emergence as a modern
+%  state} 1940: International Secretariat, Institute of Pacific
+%  Relations.
+%\end{thebibliography}
+\newpage
+\pagenumbering{Roman} %Für Verzeichnisse römische Nummerierung
+\setcounter{page}{10} %Seitenzähler zurücksetzen
+%\bibliographystyle{alpha} % plain
+\defbibheading{head}{\chapter{Quellenverzeichnis}}
+%\printbibliography[heading=head]
+\chapter{Quellenverzeichnis}
+% \nocite{*}
+
+\printbibliography[heading=subbibliography,title={Literatur},nottype=online]
+\printbibliography[heading=subbibliography,title={Online},type=online]
+\newpage

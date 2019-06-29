@@ -1,0 +1,118 @@
+\definecolor{gray75}{gray}{0.75}
+\definecolor{fom}{HTML}{23a092}
+% \font\myfont=libertine at 12pt
+% \definefont[myfont][name:libertine at 12pt]
+
+\renewcommand*\familydefault{\sfdefault}
+% \renewcommand*\familydefault{\rmdefault}
+\newcommand{\mynormal}{\fontsize{12}{12}\selectfont}
+\newcommand{\mylarge}{\fontsize{14}{14}\selectfont}
+\newcommand{\MyLarge}{\fontsize{17}{17}\selectfont}
+\newcommand{\MYLARGE}{\fontsize{20}{20}\selectfont}
+
+\newcommand{\fomhead}{
+	\fancyhead{}
+	\fancyfoot{} %alle Kopf- und Fußzeilenfelder bereinigen
+	\fancyhead[R]{\mynormal Seite \thepage}
+  \fancyhead[L]{\includegraphics[width=1cm]{Anhang/fom.jpg}}
+
+	\renewcommand{\headrulewidth}{0.2pt} %obere Trennlinie
+%	\fancyfoot[L]{\mynormal\autorkurz}
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{}
+%	\renewcommand{\footrulewidth}{0.2pt} %untere Trennlinie
+	\patchcmd{\headrule}{\hrule}{\color{gray75}\hrule}{}{}
+%	\patchcmd{\footrule}{\hrule}{\color{gray75}\hrule}{}{}
+}
+
+\fancypagestyle{plain}{\fomhead}% Für Kapitelseiten, Inhaltsverzeichnis, etc nutzen
+\fomhead% Für "`normale"' Seiten setzen
+
+\setlength{\headheight}{33pt}
+\onehalfspacing
+
+% \geometry{a4paper,left=3.4cm,right=3.4cm, top=3cm, bottom=3cm}
+\geometry{a4paper,left=3cm,right=3cm, top=3cm, bottom=3cm}
+
+\titleformat{\chapter}[display] {\normalfont\huge\bfseries}{\textcolor{fom}{\chaptertitlename\ \thechapter}}{20pt}{\Huge\textcolor{fom}}
+% \titleformat{\chapter}[hang]{\vspace{5ex} \LARGE\bfseries\scshape}{\textcolor{fom}{Kapitel \thechapter}\hsp}{20pt}{\LARGE\bfseries\textcolor{fom}}
+% \titleformat{\chapter}[hang]{\vspace{5ex} \LARGE\bfseries\scshape}{\textcolor{fom}\thechapter\hsp\textcolor{gray75}{|}\hsp}{20pt}{\LARGE\bfseries\textcolor{fom}}
+% \titleformat{\chapter}[display] {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}  % Default Titleformat
+
+% \titlespacing{\chapter}{0mm}{-4em}{2.0em}
+% \titlespacing{\section}{0mm}{-0.5em}{-0.3em}
+% \titlespacing{\subsection}{0mm}{-0.5em}{-0.3em}
+% \titlespacing{\subsubsection}{0mm}{-0.5em}{-0.3em}
+
+\setlength{\parskip}{0.5em} % 1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0.5em}
+\setlength\bibitemsep{\baselineskip}
+% \setlength{\arrayrulewidth}{0.7mm}
+\setlength{\tabcolsep}{3pt}
+
+% \renewcommand{\arraystretch}{1.}
+\def\arraystretch{1.5}%  1 is the default, change whatever you need
+\emergencystretch 3em %reduce overhanging words
+\renewcommand{\labelitemi}{{\color{fom}\textbullet}}
+
+\counterwithout*{footnote}{chapter} %Fortlaufende Nummerierung für Fußnoten
+\setcounter{secnumdepth}{5} % seting level of numbering (default for "report" is 3). With ''-1'' you have non number also for chapter
+
+\AtEndDocument{\thispagestyle{empty}} %Letzte Seite ohne Header und Footer
+
+% \lstset{
+%          basicstyle=\footnotesize\ttfamily, % Standardschrift
+%          numbers=left,               % Ort der Zeilennummern
+%          numberstyle=\tiny,          % Stil der Zeilennummern
+%          %stepnumber=2,               % Abstand zwischen den Zeilennummern
+%          numbersep=5pt,              % Abstand der Nummern zum Text
+%          tabsize=2,                  % Groesse von Tabs
+%          extendedchars=true,         %
+%          breaklines=true,            % Zeilen werden Umgebrochen
+%          keywordstyle=\color{red},
+%             frame=b,
+%  %        keywordstyle=[1]\textbf,    % Stil der Keywords
+%  %        keywordstyle=[2]\textbf,    %
+%  %        keywordstyle=[3]\textbf,    %
+%  %        keywordstyle=[4]\textbf,   \sqrt{\sqrt{}} %
+%          stringstyle=\color{white}\ttfamily, % Farbe der String
+%          showspaces=false,           % Leerzeichen anzeigen ?
+%          showtabs=false,             % Tabs anzeigen ?
+%          xleftmargin=17pt,
+%          framexleftmargin=17pt,
+%          framexrightmargin=5pt,
+%          framexbottommargin=4pt,
+%          %backgroundcolor=\color{lightgray},
+%          showstringspaces=false      % Leerzeichen in Strings anzeigen ?
+%  }
+%  \lstloadlanguages{% Check Dokumentation for further languages ...
+%          %[Visual]Basic
+%          %Pascal
+%          %C
+%          %C++
+%          %XML
+%          %HTML
+%          python
+% 				%  json
+%         %  Java
+%  }
+
+\lstset{
+  basicstyle=\ttfamily,
+  numbers=left,               % Ort der Zeilennummern
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+%\DeclareCaptionFont{white}{\color{white}}
+%\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+%\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+%\renewcommand\lstlistlistingname{Listings}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcommand\RotText[1]{\rotatebox{90}{\parbox{3.5cm}{\centering#1}}}
+
+\renewcommand{\appendixtocname}{Anhang}
