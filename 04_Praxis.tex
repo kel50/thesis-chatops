@@ -3,8 +3,8 @@
 Dieses Kapitel hat zum Ziel, die in \autoref{Validierung} erarbeiteten Anforderungen anhand eines rudimentären Chatbots, der an eine \textit{i-doit} \acs{CMDB} des Herstellers \textit{synetics} angebunden ist, umzusetzen oder deren mögliche Umsetzung zu beschreiben. Dabei wird zunächst die Umsetzung der Qualitätsanforderungen erläutert, da diese sich stärker auf die Systemarchitektur auswirken und die Grundlage für funktionale Anforderungen bilden.
 \footcite[Vgl.][9]{Pohl_2015_Requirements}
 
-Das Resultat dieses Kapitels, ein Errbot Plugin, ist auf Github verfügbar.
-\footcite[Vgl.][o. \pno]{Weiss_2019_Github}
+Das Resultat dieses Kapitels, ein Errbot Plugin, ist auf GitHub verfügbar.
+\footcite[Vgl.][o. \pno]{Weiss_2019_GitHub}
 
 \section{Qualitätsanforderungen}
 
@@ -38,7 +38,7 @@ Mit der Grundeinrichtung von Errbot kann die Anforderung \textit{Errbot} als erf
 \footcite[Vgl.][o. \pno]{errbot_2018_plugin}
 
 
-Errbot kann standardmäßig an die Backends XMPP, IRC, HipChat, Slack und Telegram angebunden werden. Außerdem können Backends von Drittanbietern, wie z. B. Cisco Webex Teams angebunden werden. Diese wurden von Usern erstellt und nicht von errbotio selbst und können in der Konfiguration mit \textit{BOT\_EXTRA\_BACKEND\_DIR} unter Angabe des entsprechenden Ordners verwendet werden. In dieser Umsetzung wird Slack als Backend verwendet, dazu wird in der Konfiguration unter \textit{BOT\_IDENTITY} der Bot Token hinterlegt und die Proxy Konfiguration für die Verwendung im internen Firmennetz gesetzt. Durch die verschiedenen Backends kann ein Errbot Plugin an eine Vielzahl von Chat Plattformen angebunden werden und die Anforderung der Plattform-Agnostik ist somit erfüllt.
+Errbot kann standardmäßig an die Backends XMPP, IRC, HipChat, Slack und Telegram angebunden werden. Außerdem können Backends von Drittanbietern, wie z. B. Cisco WebEx Teams angebunden werden. Diese wurden von Usern erstellt und nicht von errbotio selbst und können in der Konfiguration mit \textit{BOT\_EXTRA\_BACKEND\_DIR} unter Angabe des entsprechenden Ordners verwendet werden. In dieser Umsetzung wird Slack als Backend verwendet, dazu wird in der Konfiguration unter \textit{BOT\_IDENTITY} der Bot Token hinterlegt und die Proxy Konfiguration für die Verwendung im internen Firmennetz gesetzt. Durch die verschiedenen Backends kann ein Errbot Plugin an eine Vielzahl von Chat Plattformen angebunden werden und die Anforderung der Plattform-Agnostik ist somit erfüllt.
 \footcites[Vgl.][o. \pno]{errbot_2018_setup}[Vgl.][o. \pno]{errbot_2018_webex}
 
 Ob das Plugin regelbasiert oder KI-gestützt umgesetzt wird, ist allein dessen Autor überlassen. Das \acs{CMDB} Plugin wird wie gefordert regelbasiert umgesetzt und die Anforderung kann als erfüllt angesehen werden. Im Detail schlägt sich dies in den funktionalen Anforderungen nieder.
@@ -49,6 +49,7 @@ Errbot bietet die Möglichkeit, mit sogenannten \textit{Access controls} den Zug
 Wie in \autoref{errbotacl} zu erkennen ist, wurde das \acs{CMDB} Modul nur im Channel \textit{cbottest} erlaubt und das \textit{render\_test} Kommando ist nur per privater Nachricht aufrufbar.
 \footcite[Vgl.][o. \pno]{errbot_2018_config-template}
 
+\newpage
 \begin{lstlisting}[language=python, label=errbotacl, caption=Errbot Access controls]
 ACCESS_CONTROLS = {'CMDB:*': {'allowrooms': ('#cbottest',)},
                    'render_test': {'allowmuc': False},
@@ -63,6 +64,7 @@ Durch die Architektur ist in Errbot \textit{by-design} sichergestellt, dass er n
 Mit dem Tool i-doit-cli können von der Kommandozeile aus verschiedene \acs{CMDB} Funktionen, wie lesen, schreiben oder suchen ausgeführt werden. Außerdem können individuelle API Aufrufe damit abgesetzt werden. Mit dem \textit{subprocess} Modul kann das Tool einfach in Python ausgeführt und die Ausgabe ausgewertet werden, dabei werden die Parameter \textit{--no-colors} und \textit{-y} genutzt, um nicht interaktiv zu arbeiten und keine Farben auszugeben. So werden mögliche Kompatibilitätsprobleme vermieden.
 \footcite[Vgl.][o. \pno]{Heisig_2019_idoitcli}
 
+\newpage
 \subsection{Formatierung des Outputs}
 Die Ausgabe des i-doit-cli Tools besteht aus reinem Text. Zur besseren Lesbarkeit werden für verschiedene Ausgaben, wie die Liste der Suchergebnisse oder die Detailansicht Funktionen zur Formatierung angelegt (\autoref{formatter}).
 Für die Suchergebnisse (searchformatter) wird die Ausgabe am doppelten Zeilenumbruch getrennt, um die Suchergebnisse zu separieren und dann die Bestandteile des Ergebnisses zu formatieren. Dem Namen des Objekts wird eine URL zu den Details in der \acs{CMDB} hinterlegt und der Ort wird in Klammern dahinter dargestellt.\\
@@ -124,6 +126,7 @@ Der Arbeitgeber ist grundsätzlich befugt, die Einhaltung der von ihm erteilten 
 
 Im Kontext des IT-Nutzungsverhaltens wird unter Arbeitsüberwachung bzw. Arbeitnehmerüberwachung die Kontrolle des Verhaltens verstanden, also welche Webseiten besucht werden, wie lange die Verweildauer ist, an welchen Dokumenten in welchem Umfang gearbeitet wird und welche Fenster geöffnet sind (z. B. durch regelmäßige Screenshots).
 \footcite[Vgl.][55]{Rudkowski_2015_Arbeitnehmer}
+\todo{In Validierung}
 
 Bei der Entwicklung des Plugins werden keine Funktionen umgesetzt, mit denen sich Aktivität und Leistung automatisiert personenbezogen messen lassen. 
 
