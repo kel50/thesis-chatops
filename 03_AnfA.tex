@@ -240,9 +240,7 @@ Außerdem führt er an, dass die \acs{CMDB} gefordert sei, um eine ISO 27001 Zer
 Außerdem nutzt er die Report Funktion, um zu ermitteln welche Ressourcen ein Kunde oder eine Anwendung belegt (RAM, CPU, etc.). Dies sei einerseits bei der Abrechnung ausschlaggebend und andererseits bei der Beantragung neuer Dienstleistungen, wie \glqq{}zusätzliche[n] virtuelle[n] Maschinen\grqq
 \footcite[][o. \pno]{Hemm_2019}
 ,nötig, um festzustellen, ob die Anforderungen durch den bestehenden Vertrag abgebildet sind oder ob eine Erweiterung erfolgen muss. \glqq{}[D]as \ldots [geht] \ldots zu unserem Vertrieb und daraus entsteht \ldots eine Preisinformation für den Kunden\grqq
-\footcite[][o. \pno]{Hemm_2019}
-.
-\footcite[Vgl.][o. \pno]{Hemm_2019}
+\footcites[][o. \pno]{Hemm_2019}[Vgl.][o. \pno]{Hemm_2019}
 
 \textbf{\acs{CMDB} Schnittstellen: }Hemmerich hält die \acs{CMDB} für besonders wichtig, da sie \glqq{}das führende System ist\grqq
 \footcite[][o. \pno]{Hemm_2019}
@@ -282,8 +280,7 @@ Außerdem legt Hemmerich Wert darauf, dass nur ein bestimmter Personenkreis bere
 Da es sich aber größtenteils um junge, motivierte Menschen handelt, \glqq{}die auch in der Freizeit viel mit neuen Technologien arbeiten\grqq
 \footcite[][o. \pno]{Hemm_2019}
 , erwartet Hemmerich, dass ein \acs{CMDB} Chatbot \glqq{}in dem Bereich sehr großen Anklang finden wird\grqq
-\footcite[][o. \pno]{Hemm_2019},
-\footcite[Vgl.][o. \pno]{Hemm_2019}
+\footcites[][o. \pno]{Hemm_2019}[Vgl.][o. \pno]{Hemm_2019}
 
 \textbf{Transparenz, Arbeitsüberwachung: }Die ChatOps-inherente Transparenz befürwortet Hemmerich grundsätzlich. Er gibt jedoch zu bedenken, dass man darin eine Form von Arbeitsüberwachung sehen kann. In einem transparenten Chat Raum sei es denkbar, dass man nachvollziehen kann, woran und wie intensiv andere Kollegen arbeiten, deshalb solle man diesbezüglich Rücksprache mit dem Betriebsrat halten.\\
 Seitens der Kollegen rechnet er mit Zustimmung und Offenheit für diese Arbeitsweise. 
@@ -598,6 +595,7 @@ Zunächst werden die Anforderungen aufgeführt, die von mehreren Experten genann
 % \todo{Inhaltliche Strukturierung nach Mayring}
 % \footcite[Vgl.][99]{Mayring_2015_qualitative_Inhaltsanalyse}
 
+\newpage
 \subsection{Qualitätsanforderungen}
 
 \textbf{Charakter:} Der Charakter des Bots soll Professionalität ausdrücken, aber humorvoll und locker sein. Auf Formalitäten, z. B.~bei der Begrüßung soll verzichtet werden (1-14-Q, 2-15-Q, 3-11-Q, 4-5-Q).
@@ -619,6 +617,10 @@ Die Idee, einen Dschinni zu benutzen ist nachvollziehbar, da er seinem Besitzer 
 \textbf{Nachvollziehbarkeit: }Es soll nachvollziehbar sein, wer eine Änderung per Bot vorgenommen hat (1-10-Q, 2-12-Q).
 
 \textbf{Arbeitsüberwachung:}Die Arbeitsleistung Einzelner soll nicht über den Bot ausgewertet werden (1-12-Q, 2-13-Q).
+Der Arbeitgeber ist grundsätzlich befugt, die Einhaltung der von ihm erteilten Weisungen zu überprüfen und somit Leistung und Verhalten des Arbeitnehmers zu kontrollieren. Eingeschränkt wird er allerdings durch rechtliche Beschränkungen, wie Betriebsvereinbarungen, die Compliance Regeln aufstellen oder das Bundesdatenschutzgesetz, das die Verarbeitung personenbezogener Daten nur bei Einwilligung gestattet.\footcite[Vgl.][1\psqq]{Rudkowski_2015_Arbeitnehmer}
+
+Im Kontext des IT-Nutzungsverhaltens wird unter Arbeitsüberwachung bzw. Arbeitnehmerüberwachung die Kontrolle des Verhaltens verstanden, also welche Websites besucht werden, wie lange die Verweildauer ist, an welchen Dokumenten in welchem Umfang gearbeitet wird und welche Fenster geöffnet sind (z. B.~durch regelmäßige Screenshots).
+\footcite[Vgl.][55]{Rudkowski_2015_Arbeitnehmer}
 
 \textbf{Schnittstellenanbindung:}Bei der Entwicklung sollen zukünftige Schnittstellen zu Puppet und vCenter berücksichtigt werden (1-7-Q).
 
@@ -643,7 +645,7 @@ Die Idee, einen Dschinni zu benutzen ist nachvollziehbar, da er seinem Besitzer 
 
 \textbf{Sprachassistenten:} Anhand von Stimmlage und Benutzerprofil soll die Intention des Nutzers erkannt werden (4-3-Q). Diese Anforderung steht in Konflikt zu den Anforderungen \textit{Python} und \textit{Ansatz}. Die Verwendung von Errbot sieht eine rein textbasierte Eingabe vor, während die Erkennung der Stimmlage eine Spracheingabe und künstliche Intelligenz voraussetzt. Diese Anforderung kann daher nicht umgesetzt werden.
 
-
+\newpage
 \subsection{Funktionale Anforderungen}
 \textbf{Suchfunktion: } In drei der vier Interviews wurde die Anforderung genannt, eine Suchfunktion zu bieten. Diese soll mit dem Objektnamen oder dem Teil eines Objektnamens erfolgen können (1-4-F, 2-1-F, 3-5-F).
 
