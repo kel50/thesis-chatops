@@ -1,7 +1,4 @@
-% \chapter{Funktion einer CMDB im RZ-Umfeld}
-% \newpage \setcounter{page}{11} %Seitenzähler zurücksetzen
 \chapter{Anforderungsanalyse anhand von Experteninterviews} \label{AnfA}
-% In diesem Kapitel wird
 Um die Anforderungen an einen \acs{CMDB} Chatbot zu erfassen, wird in diesem Kapitel eine Anforderungsanalyse nach Pohl und Rupp durchgeführt, die als Werkzeug zur Anforderungsermittlung das Experteninterview nach Meuser und Nagel verwendet.
 
 Ziel des Anforderungsmanagements bzw. Requirements Engineerings nach Pohl und Rupp ist die Erfassung und Dokumentation von Anforderungen.\footcite[Vgl.][3]{Pohl_2015_Requirements}
@@ -14,7 +11,7 @@ Auch der Expertenbegriff muss der Forschungsfrage angepasst werden.\footcite[Vgl
 
 In dieser Arbeit wird der qualitativ ausgerichtete Ansatz von Meuser und Nagel angewendet. Quantitative Ansätze oder qualitative Ansätze anderer Autoren, die von dem behandelten abweichen werden hier nicht weiter ausgeführt.\footcite[Vgl.][o. \pno]{Meuser_2010_Interview}
 
-Meuser und Nagel unterscheiden Experteninterviews grundlegend in systematisierende und explorativ-felderschließende Interviews. Bei ersteren wird der Experte zu seinem eigenen Fachgebiet befragt (Betriebswissen), bei letzerem liefert er \glqq{}Informationen über die Kontextbedingungen des Handelns der Zielgruppe\grqq\footcite[][445]{Meuser_1991_Interview} (Kontextwissen).\footcite[Vgl.][445]{Meuser_1991_Interview}
+Meuser und Nagel unterscheiden Experteninterviews grundlegend in systematisierende und explorativ-felderschließende Interviews. Bei ersteren wird der Experte zu seinem eigenen Fachgebiet befragt (Betriebswissen), bei letzterem liefert er \glqq{}Informationen über die Kontextbedingungen des Handelns der Zielgruppe\grqq\footcite[][445]{Meuser_1991_Interview} (Kontextwissen).\footcite[Vgl.][445]{Meuser_1991_Interview}
 
 Bogner, Littig und Menz sprechen in diesem Zusammenhang von fundierenden und explorativen Interviews und fassen die vormals genannten Kategorien unter dem Begriff \textit{informatorisch} zusammen. Außerdem ergänzen sie zwei  deutungswissenorientierte Varianten. Eine genaue Aufschlüsselung ist in \autoref{tab:artenei} zu sehen.
 \footcites[Vgl.][22\psqq]{Bogner_2014_Interview}[Vgl.][445\psq]{Meuser_1991_Interview}
@@ -107,7 +104,7 @@ Virtuelle Maschinen und Cluster sind ebenfalls in der \acs{CMDB} hinterlegt.
 Neben Hardware werden auch Softwarelizenzen, Wartungsverträge, \acfp{SLA} und der \acf{ITIL} Servicekatalog abgebildet. Dadurch können auslaufende Lizenzen und Verträge rechtzeitig erkannt und verlängert oder erneuert werden.\\
 Beim Anlegen von virtuellen Maschinen oder Hardware Servern kann direkt der entsprechende Service oder Wartungsvertrag verknüpft werden. So entsteht auch ein Überblick darüber, welche Hardware wann aus der Wartung läuft und zu welchem Grad das Lizenzkontigent erschöpft ist. Gleiches gilt für Clients und deren Betriebssystem und etwaige installierte, lizenzpflichtige Software.
 
-Auch \acf{DNS} Einträge und Layer-2 und 3 Netze sind in der \acs{CMDB} dokumentiert. Beim Anlegen oder Planen eines neuen Servers (physikalisch oder virtuell) können so direkt ein Hostname und eine IP-Adresse reserviert werden, bevor die Eintragung im \acs{DNS}-Server erfolgt. Das entsprechende User Interface ist in \autoref{fig:idoitip} zu sehen. Etwaige Konflikte fallen so frühzeitig auf, z. B. durch Ping, Lookup oder Reverse Lookup der gewünschten Adressen aus der IP Liste heraus kann die Verfügbarkeit der Adressen überprüft werden, wobei bestimmte Bereiche pro Netz der Infrastruktur vorbehalten sind.
+Auch \acf{DNS} Einträge und Layer-2 und 3 Netze sind in der \acs{CMDB} dokumentiert. Beim Anlegen oder Planen eines neuen Servers (physikalisch oder virtuell) können so direkt ein Hostname und eine IP-Adresse reserviert werden, bevor die Eintragung im \acs{DNS}-Server erfolgt. Das entsprechende User Interface ist in \autoref{fig:idoitip} zu sehen. Etwaige Konflikte fallen so frühzeitig auf, z. B.~durch Ping, Lookup oder Reverse Lookup der gewünschten Adressen aus der IP Liste heraus kann die Verfügbarkeit der Adressen überprüft werden, wobei bestimmte Bereiche pro Netz der Infrastruktur vorbehalten sind.
 
 \begin{figure}[H]
   \centering
@@ -117,8 +114,8 @@ Auch \acf{DNS} Einträge und Layer-2 und 3 Netze sind in der \acs{CMDB} dokument
 \label{fig:idoitip}
 \end{figure}
 
-Die \acs{CMDB} wird überwiegend vom Team \textit{Rechenzentrum} über das Webinterface verwendet. Wenn z. B. ein neuer Server angefordert wird, erfolgt die Planung von Hostname und IP-Adresse in der \acs{CMDB}.\\
-Auch beim Einbau von Hardware, z. B. neuen Servern, wird die \acs{CMDB} prozessvorbereitend, -begleitend und -unterstützend eingesetzt: Es kann vorab geprüft werden, in welchen Racks noch genug Platz ist und wo entsprechende Möglichkeiten zur Verkabelung von Strom und Netzwerk bestehen. Wenn geprüft wurde, ob Kabel in der benötigten Länge vorrätig sind, kann der Einbau erfolgen und der Status der Hardware wird von \textit{geplant} auf \textit{in Betrieb} geändert.\\
+Die \acs{CMDB} wird überwiegend vom Team \textit{Rechenzentrum} über das Webinterface verwendet. Wenn z. B.~ein neuer Server angefordert wird, erfolgt die Planung von Hostname und IP-Adresse in der \acs{CMDB}.\\
+Auch beim Einbau von Hardware, z. B.~neuen Servern, wird die \acs{CMDB} prozessvorbereitend, -begleitend und -unterstützend eingesetzt: Es kann vorab geprüft werden, in welchen Racks noch genug Platz ist und wo entsprechende Möglichkeiten zur Verkabelung von Strom und Netzwerk bestehen. Wenn geprüft wurde, ob Kabel in der benötigten Länge vorrätig sind, kann der Einbau erfolgen und der Status der Hardware wird von \textit{geplant} auf \textit{in Betrieb} geändert.\\
 Die verwendeten Kabel werden ebenfalls dokumentiert und die entsprechenden Knotenpunkte (z. B. Netzwerkkartenport zu Switchport oder Netzteil zu Steckerleiste) verknüpft.
 
 Um die \acs{CMDB} von der Kommandozeile aus verwenden zu können, besteht die Möglichkeit, \textit{i-doit-cli} zu nutzen, einen \acf{API}-Client für die i-doit \acs{CMDB}.\\
@@ -152,7 +149,7 @@ Ein Experte zeichnet sich durch eine bestimmte Kombination von Macht und Wissen 
 
 Das Interessante am Expertenwissen ist nicht nur das Wissen an sich, sondern die Wirkung in der Praxis. Experten werden gefragt, weil ihre Entscheidungen und Ratschläge das Handeln anderer Akteure mitstrukturieren und -gestalten.\footcite[Vgl.][13]{Bogner_2014_Interview}
 
-Bogner spricht davon, dass Expertenwissen \glqq seine Bedutung über [...] soziale Wirkmächtigkeit\grqq{}\footcite[][13]{Bogner_2014_Interview} erhält.
+Bogner spricht davon, dass Expertenwissen \glqq seine Bedeutung über [...] soziale Wirkmächtigkeit\grqq{}\footcite[][13]{Bogner_2014_Interview} erhält.
 Ferner folgert er daraus die Definition:\\ \glqq Experten lassen sich als Personen verstehen, die sich -- ausgehend von einem spezifischen Praxis- oder Erfahrungswissen, das sich auf einen klar begrenzbaren Problemkreis bezieht -- die Möglichkeit geschaffen haben, mit ihren Deutungen das konkrete Handlungsfeld sinnhaft und handlungsleitend für Andere zu strukturieren.\grqq{}\footcite[][13]{Bogner_2014_Interview}
 
 Meuser und Nagel betrachten den Experten als Konstrukt des Forschungsinteresses. Die Expertise ist also keine allgemeingültige Eigenschaft oder Fähigkeit einer Person, sondern eine Zuschreibung des Forschenden an diese, im speziellen Kontext der Forschungsfrage. \footcite[Vgl.][181]{Meuser_1994_Interview}
@@ -170,10 +167,6 @@ Als Experten zur Befragung wurden die \acs{IVZ} Mitarbeiter Alexander Hemmerich 
 
 Hemmerich und Middendorf sind seit 2011 Teil der \acs{IVZ} Belegschaft und können daher aus einiger Erfahrung schöpfen. Hemmerich ist aktuell Leiter des Rechenzentrums am Standort Köln mit den Tätigkeitsschwerpunkten Storage, Backup und Loadbalancer. Somit hat er einen guten Gesamtüberblick über die Tätigkeiten des Rechenzentrums.\\
 Middendorf ist neben der Unix- und Storage Administration auch für die \acs{CMDB} des \acs{IVZ} zuständig und hat somit ein umfangreiches Wissen über Infrastruktur, Aufbau, Funktionen und Schnittstellen der \acs{CMDB}.
-
-%Heisig ist Programmierer und IT-Consultant bei i-doit, und beschäftigt sich schwerpunktmäßig mit \acf{ITSM}, DevOps und Informationssicherheit. Außerdem hat er den \textit{i-doit-cli} Client geschrieben.\\
-%Durch seine Tätigkeit hat er einen tiefen Einblick in Aufbau und Funktion einer \acs{CMDB} und kann aus den Beziehungen mit anderen Kunden von i-doit schöpfen und einschätzen, wie eine \acs{CMDB} in der Praxis verwendet wird, wie die Akzeptanz für Neuerungen ist und ob der Einsatz von Chatbots in dem jeweiligen Zusammenhang die Arbeit erleichtern könnte.\\
-%Durch seine Arbeit mit dem \textit{i-doit-cli} Client kennt er sich außerdem mit der API aus und kann einschätzen, welche Funktionen, mit welchem Aufwand, automatisiert in einem Chatbot umgesetzt werden können.
 
 Buck ist PR- und Community-Manager sowie Kommunikationsberater der synetics GmbH für das Produkt i-doit. Er hat  Publizistik und Germanistik studiert und sich als IT-Fachjournalist fortgebildet. Für synetics übernimmt er die Moderation und Kundenkommunikation, um für dauerhafte Kundenbindung zu sorgen. Durch seine Tätigkeiten hat er ein gutes Gesamtbild der Unternehmen, die eine i-doit \acs{CMDB} des Herstellers synetics einsetzen und kann den Nutzen von ChatOps für diese beurteilen. 
 \footcites[Vgl.][o. \pno]{Buck_2018_Allgemein}[Vgl.][o. \pno]{Buck_2018_Referenzen}
@@ -207,8 +200,6 @@ Der allgemeingültige Leitfaden für alle in dieser Untersuchung zu Wort kommend
 \subsection{Tonaufnahme}
 Die Interviews mit Alexander Hemmerich und Jörg Middendorf wurden persönlich durchgeführt und mit der Audiorekorderfunktion eines Handys aufgezeichnet. Die Interviews mit Daniel Kirsten und Konrad Buck erfolgten in dem Konferenztool Cisco WebEx Meeting und wurden mit dessen Aufnahmefunktion aufgezeichnet.
 
-%Die Nachbearbeitung erfolgte mit der Software \textit{Audacity}. Sie unterstützt Features wie das Vor- und Zurückspringen und das Setzen von Markierungen.
-
 
 
 \section{Dokumentation der Anforderungen}
@@ -216,7 +207,7 @@ Die Dokumentation der Anforderungen ist der zweite Schritt des Anforderungsmanag
 
 Die erarbeiteten Anforderungen werden in natürlicher Sprache oder in dafür vorgesehenen Modellen dokumentiert, wobei entsprechende Techniken zum Einsatz kommen. \footcite[Vgl.][4]{Pohl_2015_Requirements}
 
-Die im Requirements Engineering anfallenden Tätigkeiten müssen geeignet dokumentiert werden. Dazu zählt z. B. auch die Erstellung von Interviewprotokollen. Als Dokumentation gilt jede Form der formalen Darstellung, von Beschreibung in natürlicher Sprache über strukturierten Text bis hin zu formalen Techniken wie Diagrammen. Die Dokumentationsform sollte der zugrundeliegenden Aktivität angemessen sein und diese sinnvoll wiedergeben. \footcite[Vgl.][35\psqq]{Pohl_2015_Requirements}
+Die im Requirements Engineering anfallenden Tätigkeiten müssen geeignet dokumentiert werden. Dazu zählt z. B.~auch die Erstellung von Interviewprotokollen. Als Dokumentation gilt jede Form der formalen Darstellung, von Beschreibung in natürlicher Sprache über strukturierten Text bis hin zu formalen Techniken wie Diagrammen. Die Dokumentationsform sollte der zugrundeliegenden Aktivität angemessen sein und diese sinnvoll wiedergeben. \footcite[Vgl.][35\psqq]{Pohl_2015_Requirements}
 
 
 \subsection{Transkription}
@@ -248,14 +239,14 @@ Außerdem führt er an, dass die \acs{CMDB} gefordert sei, um eine ISO 27001 Zer
 , also beispielsweise zur Prüfung des aktuellen Kabelbestands im Lager oder um den Status eines Servers abzufragen (eingelagert, verschrottet, etc.).\\
 Außerdem nutzt er die Report Funktion, um zu ermitteln welche Ressourcen ein Kunde oder eine Anwendung belegt (RAM, CPU, etc.). Dies sei einerseits bei der Abrechnung ausschlaggebend und andererseits bei der Beantragung neuer Dienstleistungen, wie \glqq{}zusätzliche[n] virtuelle[n] Maschinen\grqq
 \footcite[][o. \pno]{Hemm_2019}
-,nötig, um festzustellen, ob die Anforderungen durch den bestehenden Vertrag abgebildet sind oder ob eine Erweiterung erfolgen muss. \glqq{}[D]as ... [geht] ... zu unserem Vertrieb und daraus entsteht ... eine Preisinformation für den Kunden\grqq
+,nötig, um festzustellen, ob die Anforderungen durch den bestehenden Vertrag abgebildet sind oder ob eine Erweiterung erfolgen muss. \glqq{}[D]as \ldots [geht] \ldots zu unserem Vertrieb und daraus entsteht \ldots eine Preisinformation für den Kunden\grqq
 \footcite[][o. \pno]{Hemm_2019}
 .
 \footcite[Vgl.][o. \pno]{Hemm_2019}
 
 \textbf{\acs{CMDB} Schnittstellen: }Hemmerich hält die \acs{CMDB} für besonders wichtig, da sie \glqq{}das führende System ist\grqq
 \footcite[][o. \pno]{Hemm_2019}
-. Das Monitoring System und ein Scan System liefern Daten zu und diese werden in der CMDB \glqq{}aggregriert, um eine Gesamtsicht auf das Rechenzentrum, auf die Ausstattung und sogar auf die Standorte des Unternehmens zu bieten.\grqq
+. Das Monitoring System und ein Scan System liefern Daten zu und diese werden in der CMDB \glqq{}aggregiert, um eine Gesamtsicht auf das Rechenzentrum, auf die Ausstattung und sogar auf die Standorte des Unternehmens zu bieten.\grqq
 \footcite[][o. \pno]{Hemm_2019}
 .\\
 Außerdem ergänzt er, dass neben Configuration Items des Rechenzentrums auch Gebäude, Büros und Mitarbeiter in der \acs{CMDB} vermerkt sind.
@@ -325,14 +316,14 @@ zieht Hemmerich einen regelbasierten Chatbot einem KI-gestützten vor, da das Re
 \textbf{CMDB allgemein: }Als nächstes soll das Interview mit Jörg Middendorf betrachtet werden. Unter einer \acs{CMDB} versteht er eine Datenbank, in der \glqq{}alle Gerätschaften eines Unternehmens dokumentiert sind und in Relation gesetzt werden\grqq.
 \footcite[][o. \pno]{Midd_2019}
 .
-Z. B. werden \glqq{}Server, Lizenzen und Aufstellungsorte\grqq
+Z. B.~werden \glqq{}Server, Lizenzen und Aufstellungsorte\grqq
 \footcite[][o. \pno]{Midd_2019}
  dokumentiert, um sie für Supportfälle oder Planungstätigkeiten zu nutzen.
 \footcite[Vgl.][o. \pno]{Midd_2019}
 
 \textbf{Suchfunktion, Standortabfrage, Standortreport: }Bei der täglichen Arbeit nutzt Middendorf die \acs{CMDB} vor Allem zur \glqq{}Dokumentation neu erstellter Maschinen\grqq
 \footcite[][o. \pno]{Midd_2019}
- und um Objekte wie Server zu suchen und deren Standort zu überprüfen. Außerdem nutzt er die Reporting Funktion zur Unterstützung bei Planungen, z. B. um festzustellen, \glqq{}wie viele Server an einem Standort ... sind\grqq
+ und um Objekte wie Server zu suchen und deren Standort zu überprüfen. Außerdem nutzt er die Reporting Funktion zur Unterstützung bei Planungen, z. B.~um festzustellen, \glqq{}wie viele Server an einem Standort \ldots sind\grqq
 \footcite[][o. \pno]{Midd_2019}
 . Durch ein aktuelles \glqq{}Projekt, bei dem Rechenzentren umgezogen werden\grqq
 \footcite[][o. \pno]{Midd_2019}
@@ -363,7 +354,7 @@ Außerdem ergänzt er, dass die Abfrage per Webinterface auf Mobilgeräten mögl
 \footcite[Vgl.][o. \pno]{Midd_2019}
 
 \textbf{Berechtigungskonzept, API Einsatz: }Nach Middendorfs Ansicht sollte nur ein bestimmter Personenkreis Zugriff auf die \acs{CMDB} Features haben. Dies gelte vor Allem für die schreibenden Funktionen, für die Lesenden sei eine andere Regelung denkbar (z. B. Öffnung der Suche für alle).
-Als weitere Anfoderung gibt er vor, die \acsp{API} oder Command Line Tools des \acs{CMDB} Herstellers zu nutzen und nicht direkt auf die Datenbank zuzugreifen.
+Als weitere Anforderung gibt er vor, die \acsp{API} oder Command Line Tools des \acs{CMDB} Herstellers zu nutzen und nicht direkt auf die Datenbank zuzugreifen.
 \footcite[Vgl.][o. \pno]{Midd_2019}
 
 \textbf{Nachvollziehbarkeit: }Middendorf ergänzt weiterhin, dass nachvollziehbar sein sollte, wer welche Änderung vorgenommen hat. Dies könne beispielsweise im Chatverlauf oder in einem Log File festgehalten werden und solle dauerhaft abrufbar sein. Im Idealfall werde diese Information direkt bei der Manipulation eines \acs{CI}s als Kommentar vermerkt.
@@ -385,7 +376,7 @@ Da die RZ Mitarbeiter täglich auf Kommandozeilenebene arbeiten geht Middendorf 
 \textbf{Nachfrage, Herstellerkonsolidierung: }Bei kritischen Aktionen hält Middendorf eine zusätzliche Abfrage für sinnvoll. Außerdem sei es bisher der Fall, dass der gleiche Hersteller unter unteschiedlichen Namen im System vermerkt ist (z. B. HP, Hewlett-Packard). Daher sei es sinnvoll, bei der Eintragung neuer Hardware, die bestehenden Hersteller zu berücksichtigen und bei Ähnlichkeit vorzuschlagen, um Dopplungen zu vermeiden. Dies solle interaktiv erfolgen.
 \footcite[Vgl.][o. \pno]{Midd_2019}
 
-\textbf{Potential: }Für andere Rechenzentrumstätigkeiten sieht Middendorf ebenfalls Potential. Alle Dienste mit einer API seien zur Automatisierung gut geeignet. Er könne sich z. B. die Provisionierung von virtuellen Maschinen, die Anbindung an Puppet und die Bearbeitung von DNS Einträgen vorstellen. Auch für andere Unternehmen hält er ChatOps für sinnvoll. Vor Allem die Knappheit an qualifiziertem Personal spreche für mehr Automatisierung und ein Chatbot sei dafür eine sinnvolle Möglichkeit, da er bei der täglichen Arbeit die Komplexität von Workflows reduziert.
+\textbf{Potential: }Für andere Rechenzentrumstätigkeiten sieht Middendorf ebenfalls Potential. Alle Dienste mit einer API seien zur Automatisierung gut geeignet. Er könne sich z. B.~die Provisionierung von virtuellen Maschinen, die Anbindung an Puppet und die Bearbeitung von DNS Einträgen vorstellen. Auch für andere Unternehmen hält er ChatOps für sinnvoll. Vor Allem die Knappheit an qualifiziertem Personal spreche für mehr Automatisierung und ein Chatbot sei dafür eine sinnvolle Möglichkeit, da er bei der täglichen Arbeit die Komplexität von Workflows reduziert.
 \footcite[Vgl.][o. \pno]{Midd_2019}
 
 
@@ -394,7 +385,7 @@ Da die RZ Mitarbeiter täglich auf Kommandozeilenebene arbeiten geht Middendorf 
 \textbf{CMDB allgemein: }Als nächstes soll das Interview mit Daniel Kirsten betrachtet werden. Er betrachtet in seiner Funktion als Produktmanager die \acs{CMDB} streng nach \acs{ITIL} und versteht darunter die zentrale Erfassung von IT-Infrastruktur Elementen und deren Konfiguration. Das Verständnis unterscheide sich dabei stark und die gespeicherten Daten reichten von Asset Management Informationen bis hin zu technischen Konfigurationen. Außerdem spreche man nach \acs{ITIL} nicht mehr von einer \acs{CMDB}, sondern eher von einem \acf{CMS}, welches eine Vereinigung mehrerer \acsp{CMDB} darstellt. Der Großteil der Anwender betrachte die \acs{CMDB} als Datenbank, die \glqq{}alle Komponenten einer IT-Infrastruktur vereint, dokumentiert und im Idealfall mindestens die technischen Grundkonfigurationen dieser Elemente aufnimmt.\grqq 
 \footcites[][o. \pno]{Kirsten_2019}[Vgl.][o. \pno]{Kirsten_2019}
 
-\textbf{Interner Einsatz: }Bei der täglichen Arbeit nutzt Kirsten selbst die i-doit \acs{CMDB}, um die internen technischen Komponenten zu dokumentieren. Sie diene als Nachschlagwerk und werde manuell, ohne Zuhilfenahme automatisierter Prozesse befüllt. Neben den internen Komponenten seien auch noch Cloud Ressourcen dort dokumentiert. 
+\textbf{Interner Einsatz: }Bei der täglichen Arbeit nutzt Kirsten selbst die i-doit \acs{CMDB}, um die internen technischen Komponenten zu dokumentieren. Sie diene als Nachschlagewerk und werde manuell, ohne Zuhilfenahme automatisierter Prozesse befüllt. Neben den internen Komponenten seien auch noch Cloud Ressourcen dort dokumentiert. 
 \footcite[Vgl.][o. \pno]{Kirsten_2019}
 
 \textbf{IP-Adressen, Passwörter, Cloud: }Die Erfassung von IP-Adressen und Passwörtern in der \acs{CMDB} findet Kirsten besonders wichtig. Da vermehrt Cloud Lösungen eingesetzt werden, sei es zudem wichtig Zugang und verknüpfte Dienste zu diesen Ressourcen zu dokumentieren.
@@ -403,7 +394,7 @@ Da die RZ Mitarbeiter täglich auf Kommandozeilenebene arbeiten geht Middendorf 
 \textbf{ChatOps, Chatbots, Output: }Mit ChatOps hatte Kirsten noch keine Berührungspunkte, im Grunde verstehe er es aber als DevOps Prozess, der durch Chatbots unterstützt wird.  Beim Thema Chatbots kann er aus einiger Erfahrung schöpfen, da er fast zehn Jahre lang TCL Skripte für Eggdrop Bots programmierte. Einen Chatbot definiert er als Instanz, die User Input entgegennimmt, verschiedene Datenquellen nutzt und einen menschenlesbaren Output liefert.
 \footcite[Vgl.][o. \pno]{Kirsten_2019}
 
-\textbf{Vorteile Chatbots: }Als Vorteil von Chatbots sieht Kirsten den schnellen Abruf von Informationen. Damit spare man sich z. B. das Öffnen des Browsers und die Anmeldung. Er warnt jedoch auch davor, zu viele Informationen von einem Chatbot ausgeben zu lassen. Für die gängigsten Funktionen einer \acs{CMDB} kann Kirsten sich einen Chatbot gut vorstellen. 
+\textbf{Vorteile Chatbots: }Als Vorteil von Chatbots sieht Kirsten den schnellen Abruf von Informationen. Damit spare man sich z. B.~das Öffnen des Browsers und die Anmeldung. Er warnt jedoch auch davor, zu viele Informationen von einem Chatbot ausgeben zu lassen. Für die gängigsten Funktionen einer \acs{CMDB} kann Kirsten sich einen Chatbot gut vorstellen. 
 \footcite[Vgl.][o. \pno]{Kirsten_2019}
 
 \textbf{IP-Adressen, Standortdaten, Kontaktpersonen, Suche, Logbuch: }Da der Output von Chatbots auf Text limitiert ist, empfiehlt Kirsten, die Prozesse eines Chatbots nicht zu komplex zu gestalten. Als konkrete Anwendungsfälle eines \acs{CMDB} Chatbots könne er sich die Abfrage von IP-Adressen, Standortdaten oder Kontaktpersonen vorstellen. Außerdem sei eine Suche sinnvoll, wenn man den kompletten Objektnamen nicht weiß. Zudem könne er sich vorstellen, freie IP-Adressen zu reservieren oder als Administrator Änderungen am Logbuch zu erfassen. Vor Allem die Ausgabe von Informationen hält Kirsten für leicht umsetzbar, die Eingabe stehe eher im Hintergrund, da die Normalisierung fehleranfällig ist.
@@ -423,10 +414,10 @@ Da die RZ Mitarbeiter täglich auf Kommandozeilenebene arbeiten geht Middendorf 
 \textbf{Persönlichkeit, Avatar: }Dem CMDB Chatbot eine Persönlichkeit zu verleihen hält Kirsten nicht für notwendig. Da vorwiegend Techniker damit arbeiten sollen, seien Formalitäten wie Begrüßungen überflüssig. Als Avatar könne er sich jedoch einen Roboter vorstellen. 
 \footcite[Vgl.][o. \pno]{Kirsten_2019}
 
-\textbf{Ansatz: }Kirsten spricht sich für einen regelbasierten Chatbot aus, ein KI-gestützter Bot sei eher schwierig und führe zu Frustationen beim Anlernen. Er empfiehlt die Konzentration auf \glqq{}kleine, regelbasierte Aufgaben\grqq
+\textbf{Ansatz: }Kirsten spricht sich für einen regelbasierten Chatbot aus, ein KI-gestützter Bot sei eher schwierig und führe zu Frustrationen beim Anlernen. Er empfiehlt die Konzentration auf \glqq{}kleine, regelbasierte Aufgaben\grqq
 \footcites[][o. \pno]{Kirsten_2019}[Vgl.][o. \pno]{Kirsten_2019}
 
-\textbf{Potential: }Für andere Unternehmen sieht Kirsten großes Potential für die Verwendung eines \acs{CMDB} Chatbots. Vor Allem durch die Verwendung von Slack und Whatsapp seien die Anwender mit dem Medium vertraut und können damit professionell umgehen. Schnittstellen dazu zu haben, halte er daher für sinnvoll.
+\textbf{Potential: }Für andere Unternehmen sieht Kirsten großes Potential für die Verwendung eines \acs{CMDB} Chatbots. Vor Allem durch die Verwendung von Slack und WhatsApp seien die Anwender mit dem Medium vertraut und können damit professionell umgehen. Schnittstellen dazu zu haben, halte er daher für sinnvoll.
 \footcite[Vgl.][o. \pno]{Kirsten_2019}
 
 \textbf{Reaktivität: }Ergänzend warnt Kirsten davor, Funktionen zu nutzen, die automatisch Inhalte darstellen. Dadurch gingen Informationen verloren und niemand reagiere darauf. Daher solle ein \acs{CMDB} Chatbot rein reaktiv arbeiten. 
@@ -449,8 +440,8 @@ Da die RZ Mitarbeiter täglich auf Kommandozeilenebene arbeiten geht Middendorf 
 \textbf{Kontakt Chatbots: }Persönlich hatte Buck bisher nur in Warteschleifen von Hotlines Kontakt mit Chatbots, die das Anliegen erfassen, kategorisieren und an einen echten Mitarbeiter weiterleiten.
 \footcite[Vgl.][o. \pno]{Buck_2019}
 
-\textbf{Standardanfragen, Vorhersage, Sprachassistenten: }Laut Buck könnte ein \acs{CMDB} Chatbot sämtliche Standardanfragen, die ein Admin sonst übernimmt bearbeiten. Der Bot müsste dafür an eine Wissensdatenbank mit entsprechenden Fragen angebunden werden.
-Als weiteres Feature betrachtet Buck die Vorhersage von Zuständen, also z. B. der Resssourcenbelegung von Servern, um Aktionen zu planen. Außerdem sehe er Sprachassistenten als mögliches Interface, da diese in der Lage seien Emotionalität in der Stimme zu erkennen. In der Verbindung mit dem Profil des Nutzers könne so die Intention besser verstanden werden. Er sieht in einem \acs{CMDB} Chatbot die Chance, Workflows zu vereinfachen, eine Zeitersparnis zu erzielen und die Akzeptanz bei Endanwendern zu verbessern. 
+\textbf{Standardanfragen, Vorhersage, Sprachassistenten: }Laut Buck könnte ein \acs{CMDB} Chatbot sämtliche Standardanfragen, die ein Administrator sonst übernimmt bearbeiten. Der Bot müsste dafür an eine Wissensdatenbank mit entsprechenden Fragen angebunden werden.
+Als weiteres Feature betrachtet Buck die Vorhersage von Zuständen, also z. B.~der Resssourcenbelegung von Servern, um Aktionen zu planen. Außerdem sehe er Sprachassistenten als mögliches Interface, da diese in der Lage seien Emotionalität in der Stimme zu erkennen. In der Verbindung mit dem Profil des Nutzers könne so die Intention besser verstanden werden. Er sieht in einem \acs{CMDB} Chatbot die Chance, Workflows zu vereinfachen, eine Zeitersparnis zu erzielen und die Akzeptanz bei Endanwendern zu verbessern. 
 \footcite[Vgl.][o. \pno]{Buck_2019}
 
 \textbf{Vertrauen, Gemütszustand: }Buck vermutet, dass die Benutzer der \acs{CMDB} anderen Menschen mehr vertrauen als einer Maschine, was zu einer Skepsis bei der Verwendung von Chatbots führen könnte. Beim Thema Sicherheit hingegen hat er keine Bedenken, es handele sich lediglich um eine Verschiebung \glqq{}der Schnittstelle zwischen Mensch und Maschine\grqq
@@ -582,7 +573,7 @@ Dabei werden die laut Pohl und Rupp vorgesehenen Spalten Autor und Quelle ausgel
 
 
 \section{Validierung der Anforderungen} \label{Validierung}
-Die Validierung der Anforderungen ist der dritte und letzte Schritt des Anforderungsmanagements. Im Expertenview wird darunter Schritt sechs, \textit{thematischer Vergleich}, verstanden. Ab hier werden alle Interviews gemeinsam betrachtet und die identifizierten Anforderungen können unabhängig von den Interviewpartnern betrachtet werden. Es sollen Gemeinsamkeiten und Unterschiede der Expertenaussagen aufgezeigt werden.
+Die Validierung der Anforderungen ist der dritte und letzte Schritt des Anforderungsmanagements. Im Experteninterview wird darunter Schritt sechs, \textit{thematischer Vergleich}, verstanden. Ab hier werden alle Interviews gemeinsam betrachtet und die identifizierten Anforderungen können unabhängig von den Interviewpartnern betrachtet werden. Es sollen Gemeinsamkeiten und Unterschiede der Expertenaussagen aufgezeigt werden.
 
 Um die Qualität der Anforderungen gewährleisten zu können, muss diese frühzeitig geprüft werden.\footcite[Vgl.][4]{Pohl_2015_Requirements}
 Zu den Qualitätskriterien zählen u.A. Korrektheit und Abgestimmtheit. Die Methoden der Qualitätskontrolle können dabei sowohl für einzelne Anforderungen, als auch für Anforderungsdokumente eingesetzt werden.
@@ -609,7 +600,7 @@ Zunächst werden die Anforderungen aufgeführt, die von mehreren Experten genann
 
 \subsection{Qualitätsanforderungen}
 
-\textbf{Charakter:} Der Charakter des Bots soll Professionalität ausdrücken, aber humorvoll und locker sein. Auf Formalitäten, z. B. bei der Begrüßung soll verzichtet werden (1-14-Q, 2-15-Q, 3-11-Q, 4-5-Q).
+\textbf{Charakter:} Der Charakter des Bots soll Professionalität ausdrücken, aber humorvoll und locker sein. Auf Formalitäten, z. B.~bei der Begrüßung soll verzichtet werden (1-14-Q, 2-15-Q, 3-11-Q, 4-5-Q).
 
 \textbf{Ansatz:} Als Ansatz für einen Chatbot haben sich drei Experten für einen regelbasierten Bot ausgesprochen (1-16-Q, 2-16-Q, 3-13-Q) und einer für KI-Unterstützung (4-6-Q).\\
 Hemmerich, Middendorf und Kirsten, die sich für den regelbasierten Ansatz aussprachen, haben eher betriebliches Wissen und arbeiten selbst mit der \acs{CMDB}, weswegen sie vor Allem ein Augenmerk auf den Erhalt der Betriebssicherheit legen, die besser mit einem regelbasierten Chatbot gewährleistet werden kann. Bei KI-Unterstützung befürchten sie hingegen Spielraum für Fehlinterpretationen und lange Anlernprozesse. Zudem gehen sie davon aus, dass Mitarbeiter, die mit der Kommandozeile vertraut sind schnell mit der Befehlssyntax eines regelbasierten Bots zurechtkommen werden. Als PR-Manager versteht Buck zwar die Konzepte der \acs{CMDB}, hat jedoch eher eine organisatorische Perspektive und sieht in der neuen Technologie KI vor Allem Chancen.\\
