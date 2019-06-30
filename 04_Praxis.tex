@@ -34,7 +34,7 @@ plugins
         example.py
 \end{lstlisting}
 
-Mit der Grundeinrichtung von Errbot kann die Anforderung \textit{Errbot} als erfüllt betrachtet werden. Für die \acs{CMDB} Anbindung wird ein eigenes Plugin anhand des Beispiels \textit{err-example} angelegt. In der \textit{.plug} Datei werden Beschreibung und Kompatibilität (Python 2, 3, 2+) eingetragten und in der \textit{.py} die Kommandos, die vom Bot aufrufbar sind. Weitere Schnittstellen, z. B. zu vCenter oder Monitoring können zukünftig per eigenem Plugin realisiert und vom selben Bot bedient werden. Somit gilt die Anforderung der Schnittstellenanbindung als erfüllt. 
+Mit der Grundeinrichtung von Errbot kann die Anforderung \textit{Errbot} als erfüllt betrachtet werden. Für die \acs{CMDB} Anbindung wird ein eigenes Plugin anhand des Beispiels \textit{err-example} angelegt. In der \textit{.plug} Datei werden Beschreibung und Kompatibilität (Python 2, 3, 2+) eingetragen und in der \textit{.py} die Kommandos, die vom Bot aufrufbar sind. Weitere Schnittstellen, z. B.~zu vCenter oder Monitoring können zukünftig per eigenem Plugin realisiert und vom selben Bot bedient werden. Somit gilt die Anforderung der Schnittstellenanbindung als erfüllt. 
 \footcite[Vgl.][o. \pno]{errbot_2018_plugin}
 
 
@@ -45,7 +45,7 @@ Ob das Plugin regelbasiert oder KI-gestützt umgesetzt wird, ist allein dessen A
 
 
 \subsection{Berechtigungskonzept}
-Errbot bietet die Möglichkeit, mit sogenannten \textit{Access controls} den Zugriff auf bestimmte Plugins oder Befehle zu beschränken. Dabei können Benutzer oder Räume explizit erlaubt oder verboten werden. Außerdem können Befehle in Räumen generell verboten werden (allowmuc), d.h. der Befehl kann dem Bot nur per Privatnachricht geschickt werden, was bei Befehlen mit langer Ausgabe sinnvoll sein kann.\\
+Errbot bietet die Möglichkeit, mit sogenannten \textit{Access controls} den Zugriff auf bestimmte Plugins oder Befehle zu beschränken. Dabei können Benutzer oder Räume explizit erlaubt oder verboten werden. Außerdem können Befehle in Räumen generell verboten werden (allowmuc), d.~h.~der Befehl kann dem Bot nur per Privatnachricht geschickt werden, was bei Befehlen mit langer Ausgabe sinnvoll sein kann.\\
 Wie in \autoref{errbotacl} zu erkennen ist, wurde das \acs{CMDB} Modul nur im Channel \textit{cbottest} erlaubt und das \textit{render\_test} Kommando ist nur per privater Nachricht aufrufbar.
 \footcite[Vgl.][o. \pno]{errbot_2018_config-template}
 
@@ -92,7 +92,7 @@ def nonemptyformatter(infostring):
 
 
 \subsection{Charakter}
-Um die Professionalität sicherzustellen, werden nur die angeforderten Informationen ohne Umschweife ausgegeben. Wenn eine Ausgabe von Text nötig ist, geschieht dies jedoch mit Humor und Lockerheit. Wird z. B. ein benötigter Parameter vergessen, antwortet der Bot mit \textit{Was soll ich denn damit anfangen? :man-facepalming: Da musst du schon mehr eingeben ...}. Bei einem Fehler entgegnet der Bot \textit{Da ist wohl was schief gelaufen:} und gibt anschließend die technische Fehlermeldung aus. Wenn eine Suche nichts zurückliefert, wird hingegen recht sachlich mit \textit{Keine Ergebnisse} geantwortet. 
+Um die Professionalität sicherzustellen, werden nur die angeforderten Informationen ohne Umschweife ausgegeben. Wenn eine Ausgabe von Text nötig ist, geschieht dies jedoch mit Humor und Lockerheit. Wird z. B.~ein benötigter Parameter vergessen, antwortet der Bot mit \textit{Was soll ich denn damit anfangen? :man-facepalming: Da musst du schon mehr eingeben ...}. Bei einem Fehler entgegnet der Bot \textit{Da ist wohl was schief gelaufen:} und gibt anschließend die technische Fehlermeldung aus. Wenn eine Suche nichts zurückliefert, wird hingegen recht sachlich mit \textit{Keine Ergebnisse} geantwortet. 
 
 \subsection{Avatar}
 Avatar und Name eines Bots werden beim Slack Backend bei der Erstellung des Bot Users vergeben und können nicht für ein Errbot Plugin vorgegeben werden. Der erhaltene Bot Token wird in der Errbot Konfiguration hinterlegt. Jedes Unternehmen, das eine Errbot Instanz installiert um das \acs{CMDB} Plugin zu nutzen, kann also selbst entscheiden, welcher Avatar genutzt werden soll. Für das IVZ wird daher die Maus aus der Sendung mit der Maus genutzt. 
@@ -122,9 +122,9 @@ In der ersten Version des \acs{CMDB} Chatbots wird auf die Ähnlichkeitsprüfung
 
 \subsection{Arbeitsüberwachung}
 %\footcite[Vgl.][o. \pno]{Zigon_Performance}
-Der Arbeitgeber ist grundsätzlich befugt, die Einhaltung der von ihm erteilten Weisungen zu übperprüfen und somit Leistung und Verhalten des Arbeitnehmers zu kontrollieren. Eingeschränkt wird er allerdings durch rechtliche Beschränkungen, wie Betriebsvereinbarungen, die Compliance Regeln aufstellen oder das Bundesdatenschutzgesetz, das die Verarbeitung personenbezogener Daten nur bei Einwilligung gestattet.\footcite[Vgl.][1\psqq]{Rudkowski_2015_Arbeitnehmer}
+Der Arbeitgeber ist grundsätzlich befugt, die Einhaltung der von ihm erteilten Weisungen zu überprüfen und somit Leistung und Verhalten des Arbeitnehmers zu kontrollieren. Eingeschränkt wird er allerdings durch rechtliche Beschränkungen, wie Betriebsvereinbarungen, die Compliance Regeln aufstellen oder das Bundesdatenschutzgesetz, das die Verarbeitung personenbezogener Daten nur bei Einwilligung gestattet.\footcite[Vgl.][1\psqq]{Rudkowski_2015_Arbeitnehmer}
 
-Im Kontext des IT-Nutzungsverhaltens wird unter Arbeitsüberwachung bzw. Arbeitnehmerüberwachung die Kontrolle des Verhaltens verstanden, also welche Webseiten besucht werden, wie lange die Verweildauer ist, an welchen Dokumenten in welchem Umfang gearbeitet wird und welche Fenster geöffnet sind (z. B. durch regelmäßige Screenshots).
+Im Kontext des IT-Nutzungsverhaltens wird unter Arbeitsüberwachung bzw. Arbeitnehmerüberwachung die Kontrolle des Verhaltens verstanden, also welche Websites besucht werden, wie lange die Verweildauer ist, an welchen Dokumenten in welchem Umfang gearbeitet wird und welche Fenster geöffnet sind (z. B.~durch regelmäßige Screenshots).
 \footcite[Vgl.][55]{Rudkowski_2015_Arbeitnehmer}
 \todo{In Validierung}
 
@@ -197,7 +197,7 @@ idoitcli read "mylittleserver/Contact assignment"
 idoitcli read "mylittleserver/Applications"
 \end{lstlisting}
 
-\subsection{Bestandsprüfung, Standortreport, Ressourcenübericht}
+\subsection{Bestandsprüfung, Standortreport, Ressourcenübersicht}
 Um den Bestand von Objekten im Lager oder an einem Standort prüfen zu können werden in der i-doit \acs{CMDB} Reports verwendet, die vom Betreiber individuell gestaltet und jederzeit ausgeführt werden können. Die verwendeten Ressourcen eines Kunden oder einer Anwendung werden ebenfalls über Reports abgerufen.  Im i-doit-cli gibt es derzeit keine Funktion, um Reports abzurufen. Um diese Features umzusetzen müsste entsprechend eine Erweiterung des i-doit-cli bei synetics beauftragt werden. Alternativ könnte auch betrachtet werden, ob es sich per individueller API Abfrage umsetzen lässt. Eine andere Möglichkeit ist der Einsatz der i-doit \textit{Console}, um per Cronjob die Reports täglich zu generieren und per Bot unter einer vordefinierten URL bei Anfrage herunterzuladen und in den Chat zu Posten. Im Rahmen dieser Arbeit kann dieses Feature jedoch nicht umgesetzt werden.\\
 Eine mögliche Syntax für diese Funktion könnte \textit{!cmdb report <Reportname>} sein. 
 \footcites[Vgl.][o. \pno]{idoit_2019_report}[Vgl.][o. \pno]{idoit_2019_console}
