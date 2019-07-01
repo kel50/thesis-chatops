@@ -64,12 +64,12 @@ Durch die Architektur ist in Errbot \textit{by-design} sichergestellt, dass er n
 Mit dem Tool i-doit-cli können von der Kommandozeile aus verschiedene \acs{CMDB} Funktionen, wie lesen, schreiben oder suchen ausgeführt werden. Außerdem können individuelle API Aufrufe damit abgesetzt werden. Mit dem \textit{subprocess} Modul kann das Tool einfach in Python ausgeführt und die Ausgabe ausgewertet werden, dabei werden die Parameter \textit{--no-colors} und \textit{-y} genutzt, um nicht interaktiv zu arbeiten und keine Farben auszugeben. So werden mögliche Kompatibilitätsprobleme vermieden.
 \footcite[Vgl.][o. \pno]{Heisig_2019_idoitcli}
 
-\newpage
 \subsection{Formatierung des Outputs}
 Die Ausgabe des i-doit-cli Tools besteht aus reinem Text. Zur besseren Lesbarkeit werden für verschiedene Ausgaben, wie die Liste der Suchergebnisse oder die Detailansicht Funktionen zur Formatierung angelegt (\autoref{formatter}).
 Für die Suchergebnisse (searchformatter) wird die Ausgabe am doppelten Zeilenumbruch getrennt, um die Suchergebnisse zu separieren und dann die Bestandteile des Ergebnisses zu formatieren. Dem Namen des Objekts wird eine URL zu den Details in der \acs{CMDB} hinterlegt und der Ort wird in Klammern dahinter dargestellt.\\
 Für die Detailanzeige eines Objekts (nonemptyformatter) werden nur Einträge angezeigt, die einen Inhalt haben. Ansonsten wird die Ausgabe nicht verändert.
 
+\newpage
 \begin{lstlisting}[language=python, label=formatter, caption=Funktionen zur Formatierung]
 def searchformatter(objectliststring):
     """ format search result with links """
@@ -147,6 +147,7 @@ Die Umsetzung oder geplante Umsetzung der funktionalen Anforderungen wird im Fol
 \subsection{Suchfunktion}
 Die Suche nach Objekten wird über die \textit{idoitcli search <Suchbegriff>} Funktion realisiert. Analog dazu wurde das Bot Kommando \textit{!cmdb search <Suchbegriff>} implementiert. Die Ausgabe wird dabei zur besseren Lesbarkeit formatiert (\autoref{cmdbsearch}). Bei leerem Suchstring erfolgt \textit{None} als Ausgabe. Die Funktion \textit{clirun} ist der Wrapper für das idoitcli binary.
 
+\newpage
 \begin{lstlisting}[language=python, label=cmdbsearch, caption=Suchfunktion]
 def search(term):
     """ search for term """
