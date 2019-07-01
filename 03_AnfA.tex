@@ -94,7 +94,7 @@ Die Phasen und Parallelen von Anforderungsanalyse und Experteninterview sind in 
 
 
 
-
+\newpage
 \section{Aktuelle Situation}
 Das \acs{IVZ} verwendet die \textit{i-doit} \acs{CMDB} des Herstellers synetics in dreistufiger Ausführung, also Entwicklung, Integration und Produktion.
 Sämtliche Hardware wie Server, Infrastruktur (\acf{LAN}, \acf{SAN} Switche usw.) und Verkabelung sind in dieser \acs{CMDB} erfasst.\\
@@ -102,7 +102,7 @@ Auch Clients wie Computer und Laptops sowie mobile Endgeräte wie Tablets und Sm
 Virtuelle Maschinen und Cluster sind ebenfalls in der \acs{CMDB} hinterlegt.
 
 Neben Hardware werden auch Softwarelizenzen, Wartungsverträge, \acfp{SLA} und der \acf{ITIL} Servicekatalog abgebildet. Dadurch können auslaufende Lizenzen und Verträge rechtzeitig erkannt und verlängert oder erneuert werden.\\
-Beim Anlegen von virtuellen Maschinen oder Hardware Servern kann direkt der entsprechende Service oder Wartungsvertrag verknüpft werden. So entsteht auch ein Überblick darüber, welche Hardware wann aus der Wartung läuft und zu welchem Grad das Lizenzkontigent erschöpft ist. Gleiches gilt für Clients und deren Betriebssystem und etwaige installierte, lizenzpflichtige Software.
+Beim Anlegen von virtuellen Maschinen oder Hardware Servern kann direkt der entsprechende Service oder Wartungsvertrag verknüpft werden. So entsteht auch ein Überblick darüber, welche Hardware wann aus der Wartung läuft und zu welchem Grad das Lizenzkontingent erschöpft ist. Gleiches gilt für Clients und deren Betriebssystem und etwaige installierte, lizenzpflichtige Software.
 
 Auch \acf{DNS} Einträge und Layer-2 und 3 Netze sind in der \acs{CMDB} dokumentiert. Beim Anlegen oder Planen eines neuen Servers (physikalisch oder virtuell) können so direkt ein Hostname und eine IP-Adresse reserviert werden, bevor die Eintragung im \acs{DNS}-Server erfolgt. Das entsprechende User Interface ist in \autoref{fig:idoitip} zu sehen. Etwaige Konflikte fallen so frühzeitig auf, z. B.~durch Ping, Lookup oder Reverse Lookup der gewünschten Adressen aus der IP Liste heraus kann die Verfügbarkeit der Adressen überprüft werden, wobei bestimmte Bereiche pro Netz der Infrastruktur vorbehalten sind.
 
@@ -114,7 +114,7 @@ Auch \acf{DNS} Einträge und Layer-2 und 3 Netze sind in der \acs{CMDB} dokument
 \label{fig:idoitip}
 \end{figure}
 
-Die \acs{CMDB} wird überwiegend vom Team \textit{Rechenzentrum} über das Webinterface verwendet. Wenn z. B.~ein neuer Server angefordert wird, erfolgt die Planung von Hostname und IP-Adresse in der \acs{CMDB}.\\
+Die \acs{CMDB} wird überwiegend vom Team \textit{Rechenzentrum} über das Webinterface verwendet. Wenn z.~B.~ein neuer Server angefordert wird, erfolgt die Planung von Hostname und IP-Adresse in der \acs{CMDB}.\\
 Auch beim Einbau von Hardware, z. B.~neuen Servern, wird die \acs{CMDB} prozessvorbereitend, -begleitend und -unterstützend eingesetzt: Es kann vorab geprüft werden, in welchen Racks noch genug Platz ist und wo entsprechende Möglichkeiten zur Verkabelung von Strom und Netzwerk bestehen. Wenn geprüft wurde, ob Kabel in der benötigten Länge vorrätig sind, kann der Einbau erfolgen und der Status der Hardware wird von \textit{geplant} auf \textit{in Betrieb} geändert.\\
 Die verwendeten Kabel werden ebenfalls dokumentiert und die entsprechenden Knotenpunkte (z. B. Netzwerkkartenport zu Switchport oder Netzteil zu Steckerleiste) verknüpft.
 
@@ -144,8 +144,9 @@ Ein Experte zeichnet sich durch eine bestimmte Kombination von Macht und Wissen 
 \label{fig:experte}
 \end{figure}
 
-\glqq{}Der Experte ist -- im Gegensatz zum Spezialisten – nicht allein durch Sonderwissen in Form fachspezifischer Kompetenzen charakterisiert, sondern durch seine Fähigkeit, Verbindungen zu anderen Wissensbeständen und Wissensformen herzustellen und die Relevanz des eigenen Wissens zu reflektieren\grqq.
-\footcites[][14]{Bogner_2014_Interview}[Vgl.][21 \psq]{Hitzler_1994}
+\glqq{}Der Experte ist -- im Gegensatz zum Spezialisten – nicht allein durch Sonderwissen in Form fachspezifischer Kompetenzen charakterisiert, sondern durch seine Fähigkeit, Verbindungen zu anderen Wissensbeständen und Wissensformen herzustellen und die Relevanz des eigenen Wissens zu reflektieren\grqq
+\footcite[][14]{Bogner_2014_Interview}{}.
+\footcite[Vgl.][21 \psq]{Hitzler_1994}
 
 Das Interessante am Expertenwissen ist nicht nur das Wissen an sich, sondern die Wirkung in der Praxis. Experten werden gefragt, weil ihre Entscheidungen und Ratschläge das Handeln anderer Akteure mitstrukturieren und -gestalten.\footcite[Vgl.][13]{Bogner_2014_Interview}
 
@@ -280,7 +281,8 @@ Außerdem legt Hemmerich Wert darauf, dass nur ein bestimmter Personenkreis bere
 Da es sich aber größtenteils um junge, motivierte Menschen handelt, \glqq{}die auch in der Freizeit viel mit neuen Technologien arbeiten\grqq
 \footcite[][o. \pno]{Hemm_2019}
 , erwartet Hemmerich, dass ein \acs{CMDB} Chatbot \glqq{}in dem Bereich sehr großen Anklang finden wird\grqq
-\footcites[][o. \pno]{Hemm_2019}[Vgl.][o. \pno]{Hemm_2019}
+\footcite[][o. \pno]{Hemm_2019}{}.
+\footcite[Vgl.][o. \pno]{Hemm_2019}
 
 \textbf{Transparenz, Arbeitsüberwachung: }Die ChatOps-inherente Transparenz befürwortet Hemmerich grundsätzlich. Er gibt jedoch zu bedenken, dass man darin eine Form von Arbeitsüberwachung sehen kann. In einem transparenten Chat Raum sei es denkbar, dass man nachvollziehen kann, woran und wie intensiv andere Kollegen arbeiten, deshalb solle man diesbezüglich Rücksprache mit dem Betriebsrat halten.\\
 Seitens der Kollegen rechnet er mit Zustimmung und Offenheit für diese Arbeitsweise. 
@@ -350,7 +352,7 @@ Außerdem ergänzt er, dass die Abfrage per Webinterface auf Mobilgeräten mögl
 \textbf{Servereinbau, Serverausbau: }Als Möglichkeit zur Arbeitsvereinfachung sieht Middendorf einen \acs{CMDB} Chatbot auch beim Einbau von neuer Hardware im Rechenzentrum. So könne er direkt den Einbauort vermerken, den Server benennen und ihm eine IP-Adresse zuweisen. Beim Ausbau eines Geräts könne er hingegen den Status des Geräts auf \textit{außer Betrieb} oder \textit{verschrottet} setzen.
 \footcite[Vgl.][o. \pno]{Midd_2019}
 
-\textbf{Berechtigungskonzept, API Einsatz: }Nach Middendorfs Ansicht sollte nur ein bestimmter Personenkreis Zugriff auf die \acs{CMDB} Features haben. Dies gelte vor Allem für die schreibenden Funktionen, für die Lesenden sei eine andere Regelung denkbar (z. B. Öffnung der Suche für alle).
+\textbf{Berechtigungskonzept, API Einsatz: }Nach Middendorfs Ansicht sollte nur ein bestimmter Personenkreis Zugriff auf die \acs{CMDB} Features haben. Dies gelte vor Allem für die schreibenden Funktionen, für die lesenden sei eine andere Regelung denkbar (z. B. Öffnung der Suche für alle).
 Als weitere Anforderung gibt er vor, die \acsp{API} oder Command Line Tools des \acs{CMDB} Herstellers zu nutzen und nicht direkt auf die Datenbank zuzugreifen.
 \footcite[Vgl.][o. \pno]{Midd_2019}
 
@@ -571,14 +573,13 @@ Dabei werden die laut Pohl und Rupp vorgesehenen Spalten Autor und Quelle ausgel
 
 \section{Validierung der Anforderungen} \label{Validierung}
 Die Validierung der Anforderungen ist der dritte und letzte Schritt des Anforderungsmanagements. Im Experteninterview wird darunter Schritt sechs, \textit{thematischer Vergleich}, verstanden. Ab hier werden alle Interviews gemeinsam betrachtet und die identifizierten Anforderungen können unabhängig von den Interviewpartnern betrachtet werden. Es sollen Gemeinsamkeiten und Unterschiede der Expertenaussagen aufgezeigt werden.
+Es erfolgt ein Vergleich der thematisch ähnlichen Textpassagen aller Interviews, wobei die Überschriften nach Möglichkeit vereinheitlicht werden. Es wird geprüft, ob sich die Äußerungen der Experten decken oder ob sie unterschiedliche Ansichten haben. Außerdem wird betrachtet, zu welchen Themen sich alle Experten äußern und zu welchen nur einzelne.
+\footcites[Vgl.][459\psq]{Meuser_1991_Interview}[Vgl.][37]{Matthes_1986}
 
 Um die Qualität der Anforderungen gewährleisten zu können, muss diese frühzeitig geprüft werden.\footcite[Vgl.][4]{Pohl_2015_Requirements}
 Zu den Qualitätskriterien zählen u.A. Korrektheit und Abgestimmtheit. Die Methoden der Qualitätskontrolle können dabei sowohl für einzelne Anforderungen, als auch für Anforderungsdokumente eingesetzt werden.
 Bei der Überprüfung der Anforderungen sollen Fehler wie \glqq{}Mehrdeutigkeit, Unvollständigkeit und Widersprüche\grqq\footcite[][95]{Pohl_2015_Requirements} aufgedeckt werden.
 \footcite[Vgl.][95]{Pohl_2015_Requirements}
-
-Ab dem thematischen Vergleich werden nicht mehr die Interviews im Einzelnen betrachtet, es erfolgt ein Vergleich der thematisch ähnlichen Textpassagen aller Interviews, wobei die Überschriften nach Möglichkeit vereinheitlicht werden. Es wird geprüft, ob sich die Äußerungen der Experten decken oder ob sie unterschiedliche Ansichten haben. Außerdem wird betrachtet, zu welchen Themen sich alle Experten äußern und zu welchen nur einzelne.
-\footcites[Vgl.][459\psq]{Meuser_1991_Interview}[Vgl.][37]{Matthes_1986}
 
 Die Interpretation erfolgt dabei auch nach Meuser und Nagel, die kein striktes Vorgehen beschreiben, sondern lediglich ein Modell vorgeben, das hinsichtlich der jeweiligen Untersuchung angepasst werden muss.
 Dabei wird die Bedeutung der Expertenaussagen kontextabhängig interpretiert und es werden thematische Blöcke aus den Textpassagen gebildet, die inhaltlich zusammengehören.
@@ -606,7 +607,7 @@ Aus betrieblicher Sicht kommt also nur der regelbasierte Ansatz in Frage und die
 
 \textbf{Berechtigungskonzept:}Drei der vier Experten nannten die Anforderung eines Berechtigungskonzepts. Dabei sollen nur berechtigte Personen Informationen anzeigen und Änderungen vornehmen dürfen (1-9-Q, 2-10-Q, 3-8-Q).
 
-\textbf{Bot Framework:} 3 Experten forderten, dass die Programmiersprache Python sein soll, bzw. das konkrete Bot Framework Errbot (1-13-Q, 2-14-Q, 3-10-Q).
+\textbf{Bot Framework:} Drei Experten forderten, dass die Programmiersprache Python sein soll, bzw. das konkrete Bot Framework Errbot (1-13-Q, 2-14-Q, 3-10-Q).
 
 \textbf{Avatar:} Einen Avatar für den Chatbot konnten sich drei der vier Experten vorstellen: Die Maus (aus der Sendung mit der Maus), Dschinni\footnote{Dschinni ist eine magische Figur in Aladin und die Wunderlampe aus den Märchen aus 1001 Nacht} und einen Roboter (1-15-Q, 3-12-Q, 4-4-Q). Die von Hemmerich genannte Maus entstammt vermutlich dem Gedanken, dass der Bot im \acs{IVZ} entwickelt wird, das am Standort Köln dem \acs{WDR} nahe steht, der die Sendung mit der Maus produziert. Da der Bot aber nicht für ein spezielles Unternehmen entwickelt wird, sondern ein generelles Interface zur i-doit \acs{CMDB} geschaffen werden soll, macht ein allgemeingültiger Avatar mehr Sinn.\\
 Die Idee, einen Dschinni zu benutzen ist nachvollziehbar, da er seinem Besitzer Wünsche erfüllt, ähnlich wie ein Chatbot Befehle ausführt, die ein Benutzer \textit{wünscht}. Ein Roboter hingegen unterstreicht, dass es sich um eine Maschine, bzw. ein Programm handelt und keinen Menschen mit dem man sich unterhalten kann, daher ist die Verwendung eines Roboters als Avatar treffender für einen \acs{CMDB} Chatbot.
@@ -632,7 +633,7 @@ Im Kontext des IT-Nutzungsverhaltens wird unter Arbeitsüberwachung bzw. Arbeitn
 
 \textbf{Herstellerkonsolidierung:} Bestehende Hersteller sollen beim Anlegen von Objekten berücksichtigt werden, um Dopplungen zu vermeiden (2-19-Q).
 
-\textbf{Formatierung des Outputs:} Die Ausgaben des Bots sollen einfach menschenlesbar sein (3-1-Q). Im Sinne der Software-Ergonomie nach Stary beeinflussen Abstand des Nutzers vom Bildschirm, Helligkeit, Gestalt und Zwischenräume der Zeichen, Überschriften und Struktur, sowie Farbe die Lesbarkeit von Text. Je nach Framework können bei der Entwicklung eines Chatbots Überschriften, Struktur und Farbe für eine bessere Lesbarkeit der Ausgabe verwendet werden. Die restlichen Faktoren werden von Nutzer, Hardware oder Chat Software vorgegeben.
+\textbf{Formatierung des Outputs:} Die Ausgaben des Bots sollen einfach menschenlesbar sein (3-1-Q). Im Sinne der Software-Ergonomie nach Stary beeinflussen Abstand des Nutzers vom Bildschirm, Helligkeit, Gestalt und Zwischenräume der Zeichen, Überschriften und Struktur, sowie Farbe die Lesbarkeit von Text. Je nach Framework können bei der Entwicklung eines Chatbots Überschriften, Struktur und Farbe für eine bessere Lesbarkeit der Ausgabe verwendet werden. Die restlichen Faktoren werden von Nutzer, Hardware oder Chat-Tool vorgegeben.
 \footcite[Vgl.][66\psq]{Stary_1996_Ergonomie}
 
 \textbf{Plattform-Agnostik:} Der Bot soll an verschiedene Chat Plattformen angebunden werden können (3-9-Q).
