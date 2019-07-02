@@ -14,7 +14,7 @@ Auch unter den Qualitätsanforderungen gibt es Abhängigkeiten, weshalb diese au
 \subsection{Ansatz, Bot-Framework, Plattform-Agnostik, Schnittstellenanbindung}
 
 Da sich das Bot-Framework \textit{Errbot} als Anforderung herausgebildet hat und es ein grundlegendes Element ist, wird es zuerst betrachtet.\\
-Für die Installation von Errbot werden verschiedene Methoden angeboten: Als System-Paket, systemweit mit dem Python Paketmanager \textit{pip} oder in einer virtuellen Python Umgebung, einem sogenannten \textit{virtualenv}. Da letztere Variante die präferierte ist, wird diese durchgeführt. Die Installation erfolgt wie in \autoref{venv} beschrieben.
+Für die Installation von Errbot werden verschiedene Methoden angeboten: als System-Paket, systemweit mit dem Python Paketmanager \textit{pip} oder in einer virtuellen Python Umgebung, einem sogenannten \textit{virtualenv}. Da letztere Variante die präferierte ist, wird diese durchgeführt. Die Installation erfolgt wie in \autoref{venv} beschrieben.
 \footcite[Vgl.][o. \pno]{errbot_2018_setup}
 
 \begin{lstlisting}[language=bash, label=venv, caption=Virtualenv Einrichtung und Errbot Installation]
@@ -95,7 +95,7 @@ def nonemptyformatter(infostring):
 Um die Professionalität sicherzustellen, werden nur die angeforderten Informationen ohne Umschweife ausgegeben. Wenn eine Ausgabe von Text nötig ist, geschieht dies jedoch mit Humor und Lockerheit. Wird z. B.~ein benötigter Parameter vergessen, antwortet der Bot mit \textit{Was soll ich denn damit anfangen? :man-facepalming: Da musst du schon mehr eingeben ...}. Bei einem Fehler entgegnet der Bot \textit{Da ist wohl was schief gelaufen:} und gibt anschließend die technische Fehlermeldung aus. Wenn eine Suche nichts zurückliefert, wird hingegen recht sachlich mit \textit{Keine Ergebnisse} geantwortet. 
 
 \subsection{Avatar}
-Avatar und Name eines Bots werden beim Slack Backend bei der Erstellung des Bot Users vergeben und können nicht für ein Errbot Plugin vorgegeben werden. Der erhaltene Bot Token wird in der Errbot Konfiguration hinterlegt. Jedes Unternehmen, das eine Errbot Instanz installiert um das \acs{CMDB} Plugin zu nutzen, kann also selbst entscheiden, welcher Avatar genutzt werden soll. Für das IVZ wird daher die Maus aus der Sendung mit der Maus genutzt. 
+Avatar und Name eines Bots werden beim Slack Backend bei der Erstellung des Bot Users vergeben und können nicht für ein Errbot Plugin vorgegeben werden. Der erhaltene Bot Token wird in der Errbot Konfiguration hinterlegt. Jedes Unternehmen, das eine Errbot Instanz installiert, um das \acs{CMDB} Plugin zu nutzen, kann also selbst entscheiden, welcher Avatar genutzt werden soll. Für das IVZ wird daher die Maus aus der Sendung mit der Maus genutzt. 
 \footcite[Vgl.][o. \pno]{Slack_2019_Bots}
 
 \subsection{Nachvollziehbarkeit} \label{Nachvollziehbarkeit}
@@ -117,7 +117,7 @@ Benutzer: !yes
 \end{lstlisting}
 
 \subsection{Herstellerkonsolidierung}
-Um doppelte Herstellernamen zu vermeiden kann entweder vor dem Anlegen eines neuen Objekts eine Suche nach dem Namen erfolgen oder es kann nach der Eingabe des Namens automatisch auf Ähnlichkeit zu anderen Namen geprüft werden.
+Um doppelte Herstellernamen zu vermeiden, kann entweder vor dem Anlegen eines neuen Objekts eine Suche nach dem Namen erfolgen oder es kann nach der Eingabe des Namens automatisch auf Ähnlichkeit zu anderen Namen geprüft werden.
 In der ersten Version des \acs{CMDB} Chatbots wird auf die Ähnlichkeitsprüfung verzichtet, da dies auch mit einer zuvor getätigten Suche sichergestellt werden kann. Es muss zudem definiert werden, welche Ähnlichkeiten geprüft werden sollen (Beginn, Ende) und welche Hersteller trotz fehlender Ähnlichkeit im Namen zusammengefasst werden sollen (Umbenennung, Zusammenschluss).
 
 \subsection{Arbeitsüberwachung}
@@ -193,7 +193,7 @@ idoitcli read "mylittleserver/Applications"
 \end{lstlisting}
 
 \subsection{Bestandsprüfung, Standortreport, Ressourcenübersicht}
-Um den Bestand von Objekten im Lager oder an einem Standort prüfen zu können werden in der i-doit \acs{CMDB} Reports verwendet, die vom Betreiber individuell gestaltet und jederzeit ausgeführt werden können. Die verwendeten Ressourcen eines Kunden oder einer Anwendung werden ebenfalls über Reports abgerufen.  Im i-doit-cli gibt es derzeit keine Funktion, um Reports abzurufen. Um diese Features umzusetzen müsste entsprechend eine Erweiterung des i-doit-cli bei synetics beauftragt werden. Alternativ könnte auch betrachtet werden, ob es sich per individueller API Abfrage umsetzen lässt. Eine andere Möglichkeit ist der Einsatz der i-doit \textit{Console}, um per Cronjob die Reports täglich zu generieren und per Bot unter einer vordefinierten URL bei Anfrage herunterzuladen und in den Chat zu Posten. Im Rahmen dieser Arbeit kann dieses Feature jedoch nicht umgesetzt werden.\\
+Um den Bestand von Objekten im Lager oder an einem Standort prüfen zu können werden in der i-doit \acs{CMDB} Reports verwendet, die vom Betreiber individuell gestaltet und jederzeit ausgeführt werden können. Die verwendeten Ressourcen eines Kunden oder einer Anwendung werden ebenfalls über Reports abgerufen.  Im i-doit-cli gibt es derzeit keine Funktion, um Reports abzurufen. Um diese Features umzusetzen, müsste entsprechend eine Erweiterung des i-doit-cli bei synetics beauftragt werden. Alternativ könnte auch betrachtet werden, ob es sich per individueller API Abfrage umsetzen lässt. Eine andere Möglichkeit ist der Einsatz der i-doit \textit{Console}, um per Cronjob die Reports täglich zu generieren und per Bot unter einer vordefinierten URL bei Anfrage herunterzuladen und in den Chat zu posten. Im Rahmen dieser Arbeit kann dieses Feature jedoch nicht umgesetzt werden.\\
 Eine mögliche Syntax für diese Funktion könnte \textit{!cmdb report <Reportname>} sein. 
 \footcites[Vgl.][o. \pno]{idoit_2019_report}[Vgl.][o. \pno]{idoit_2019_console}
 %\todo{über i-doit Controller}
