@@ -3,7 +3,7 @@
 Dieses Kapitel hat zum Ziel, die in \autoref{Validierung} erarbeiteten Anforderungen anhand eines rudimentären Chatbots, der an eine \textit{i-doit} \acs{CMDB} des Herstellers \textit{synetics} angebunden ist, umzusetzen oder deren mögliche Umsetzung zu beschreiben. Dabei wird zunächst die Umsetzung der Qualitätsanforderungen erläutert, da diese sich stärker auf die Systemarchitektur auswirken und die Grundlage für funktionale Anforderungen bilden.
 \footcite[Vgl.][9]{Pohl_2015_Requirements}
 
-Das Resultat dieses Kapitels, ein Errbot Plugin, ist auf GitHub verfügbar.
+Das Resultat dieses Kapitels, ein Errbot Plug-in, ist auf GitHub verfügbar.
 \footcite[Vgl.][o. \pno]{Weiss_2019_GitHub}
 
 \section{Qualitätsanforderungen}
@@ -22,7 +22,7 @@ mkvirtualenv -p `which python3` errbot-ve
 pip install errbot
 \end{lstlisting}
 
-Mit \textit{errbot -~-init} wird ein initiales Projekt angelegt, das bereits ein Beispiel Plugin enthält. Die Struktur ist in \autoref{errbotstructure} ersichtlich. In der Datei \textit{config.py} werden Konfigurationen, wie das verwendete Backend, das Log File, die Bot Administratoren und die Bot Identität vorgenommen.
+Mit \textit{errbot -~-init} wird ein initiales Projekt angelegt, das bereits ein Beispiel Plug-in enthält. Die Struktur ist in \autoref{errbotstructure} ersichtlich. In der Datei \textit{config.py} werden Konfigurationen, wie das verwendete Backend, das Log File, die Bot Administratoren und die Bot Identität vorgenommen.
 \footcite[Vgl.][o. \pno]{errbot_2018_setup}
 
 \begin{lstlisting}[language=bash, label=errbotstructure, caption=Struktur eines Errbot Projektes]
@@ -34,18 +34,18 @@ plugins
         example.py
 \end{lstlisting}
 
-Mit der Grundeinrichtung von Errbot kann die Anforderung \textit{Errbot} als erfüllt betrachtet werden. Für die \acs{CMDB} Anbindung wird ein eigenes Plugin anhand des Beispiels \textit{err-example} angelegt. In der \textit{.plug} Datei werden Beschreibung und Kompatibilität (Python 2, 3, 2+) eingetragen und in der \textit{.py} die Kommandos, die vom Bot aufrufbar sind. Weitere Schnittstellen, z. B.~zu vCenter oder Monitoring können zukünftig per eigenem Plugin realisiert und vom selben Bot bedient werden. Somit gilt die Anforderung der Schnittstellenanbindung als erfüllt. 
+Mit der Grundeinrichtung von Errbot kann die Anforderung \textit{Errbot} als erfüllt betrachtet werden. Für die \acs{CMDB} Anbindung wird ein eigenes Plug-in anhand des Beispiels \textit{err-example} angelegt. In der \textit{.plug} Datei werden Beschreibung und Kompatibilität (Python 2, 3, 2+) eingetragen und in der \textit{.py} die Kommandos, die vom Bot aufrufbar sind. Weitere Schnittstellen, z. B.~zu vCenter oder Monitoring können zukünftig per eigenem Plug-in realisiert und vom selben Bot bedient werden. Somit gilt die Anforderung der Schnittstellenanbindung als erfüllt. 
 \footcite[Vgl.][o. \pno]{errbot_2018_plugin}
 
 
-Errbot kann standardmäßig an die Backends XMPP, IRC, HipChat, Slack und Telegram angebunden werden. Außerdem können Backends von Drittanbietern, wie z. B. Cisco WebEx Teams angebunden werden. Diese wurden von Usern erstellt und nicht von errbotio selbst und können in der Konfiguration mit \textit{BOT\_EXTRA\_BACKEND\_DIR} unter Angabe des entsprechenden Ordners verwendet werden. In dieser Umsetzung wird Slack als Backend verwendet, dazu wird in der Konfiguration unter \textit{BOT\_IDENTITY} der Bot Token hinterlegt und die Proxy Konfiguration für die Verwendung im internen Firmennetz gesetzt. Durch die verschiedenen Backends kann ein Errbot Plugin an eine Vielzahl von Chat Plattformen angebunden werden und die Anforderung der Plattform-Agnostik ist somit erfüllt.
+Errbot kann standardmäßig an die Backends XMPP, IRC, HipChat, Slack und Telegram angebunden werden. Außerdem können Backends von Drittanbietern, wie z. B. Cisco WebEx Teams angebunden werden. Diese wurden von Usern erstellt und nicht von errbotio selbst und können in der Konfiguration mit \textit{BOT\_EXTRA\_BACKEND\_DIR} unter Angabe des entsprechenden Ordners verwendet werden. In dieser Umsetzung wird Slack als Backend verwendet, dazu wird in der Konfiguration unter \textit{BOT\_IDENTITY} der Bot Token hinterlegt und die Proxy Konfiguration für die Verwendung im internen Firmennetz gesetzt. Durch die verschiedenen Backends kann ein Errbot Plug-in an eine Vielzahl von Chat Plattformen angebunden werden und die Anforderung der Plattform-Agnostik ist somit erfüllt.
 \footcites[Vgl.][o. \pno]{errbot_2018_setup}[Vgl.][o. \pno]{errbot_2018_webex}
 
-Ob das Plugin regelbasiert oder KI-gestützt umgesetzt wird, ist allein dessen Autor überlassen. Das \acs{CMDB} Plugin wird wie gefordert regelbasiert umgesetzt und die Anforderung kann als erfüllt angesehen werden. Im Detail schlägt sich dies in den funktionalen Anforderungen nieder.
+Ob das Plug-in regelbasiert oder KI-gestützt umgesetzt wird, ist allein dessen Autor überlassen. Das \acs{CMDB} Plug-in wird wie gefordert regelbasiert umgesetzt und die Anforderung kann als erfüllt angesehen werden. Im Detail schlägt sich dies in den funktionalen Anforderungen nieder.
 
 
 \subsection{Berechtigungskonzept}
-Errbot bietet die Möglichkeit, mit sogenannten \textit{Access controls} den Zugriff auf bestimmte Plugins oder Befehle zu beschränken. Dabei können Benutzer oder Räume explizit erlaubt oder verboten werden. Außerdem können Befehle in Räumen generell verboten werden (allowmuc), d.~h.~der Befehl kann dem Bot nur per Privatnachricht geschickt werden, was bei Befehlen mit langer Ausgabe sinnvoll sein kann.\\
+Errbot bietet die Möglichkeit, mit sogenannten \textit{Access controls} den Zugriff auf bestimmte Plug-ins oder Befehle zu beschränken. Dabei können Benutzer oder Räume explizit erlaubt oder verboten werden. Außerdem können Befehle in Räumen generell verboten werden (allowmuc), d.~h.~der Befehl kann dem Bot nur per Privatnachricht geschickt werden, was bei Befehlen mit langer Ausgabe sinnvoll sein kann.\\
 Wie in \autoref{errbotacl} zu erkennen ist, wurde das \acs{CMDB} Modul nur im Channel \textit{cbottest} erlaubt und das \textit{render\_test} Kommando ist nur per privater Nachricht aufrufbar.
 \footcite[Vgl.][o. \pno]{errbot_2018_config-template}
 
@@ -95,7 +95,7 @@ def nonemptyformatter(infostring):
 Um die Professionalität sicherzustellen, werden nur die angeforderten Informationen ohne Umschweife ausgegeben. Wenn eine Ausgabe von Text nötig ist, geschieht dies jedoch mit Humor und Lockerheit. Wird z. B.~ein benötigter Parameter vergessen, antwortet der Bot mit \textit{Was soll ich denn damit anfangen? :man-facepalming: Da musst du schon mehr eingeben ...}. Bei einem Fehler entgegnet der Bot \textit{Da ist wohl was schief gelaufen:} und gibt anschließend die technische Fehlermeldung aus. Wenn eine Suche nichts zurückliefert, wird hingegen recht sachlich mit \textit{Keine Ergebnisse} geantwortet. 
 
 \subsection{Avatar}
-Avatar und Name eines Bots werden beim Slack Backend bei der Erstellung des Bot Users vergeben und können nicht für ein Errbot Plugin vorgegeben werden. Der erhaltene Bot Token wird in der Errbot Konfiguration hinterlegt. Jedes Unternehmen, das eine Errbot Instanz installiert, um das \acs{CMDB} Plugin zu nutzen, kann also selbst entscheiden, welcher Avatar genutzt werden soll. Für das IVZ wird daher die Maus aus der Sendung mit der Maus genutzt. 
+Avatar und Name eines Bots werden beim Slack Backend bei der Erstellung des Bot Users vergeben und können nicht für ein Errbot Plug-in vorgegeben werden. Der erhaltene Bot Token wird in der Errbot Konfiguration hinterlegt. Jedes Unternehmen, das eine Errbot Instanz installiert, um das \acs{CMDB} Plug-in zu nutzen, kann also selbst entscheiden, welcher Avatar genutzt werden soll. Für das IVZ wird daher die Maus aus der Sendung mit der Maus genutzt. 
 \footcite[Vgl.][o. \pno]{Slack_2019_Bots}
 
 \subsection{Nachvollziehbarkeit} \label{Nachvollziehbarkeit}
@@ -122,7 +122,7 @@ In der ersten Version des \acs{CMDB} Chatbots wird auf die Ähnlichkeitsprüfung
 
 \subsection{Arbeitsüberwachung}
 %\footcite[Vgl.][o. \pno]{Zigon_Performance}
-Bei der Entwicklung des Plugins werden keine Funktionen umgesetzt, mit denen sich Aktivität und Leistung automatisiert personenbezogen messen lassen. 
+Bei der Entwicklung des Plug-ins werden keine Funktionen umgesetzt, mit denen sich Aktivität und Leistung automatisiert personenbezogen messen lassen. 
 
 \subsection{Webinterface-Eingaben}
 Die Bedienung der \acs{CMDB} per Chatbot bietet lediglich eine Ergänzung der Eingabemethoden. Das Webinterface der \acs{CMDB} kann weiterhin parallel genutzt werden.
@@ -142,7 +142,7 @@ Da im Rahmen der Experteninterviews Administratoren der \acs{CMDB} befragt wurde
 
 
 \section{Funktionale Anforderungen}
-Die Umsetzung oder geplante Umsetzung der funktionalen Anforderungen wird im Folgenden einzeln beschrieben. Wenn mehrere Anforderungen durch eine Funktion abgedeckt werden können, sind diese in einem Punkt zusammengefasst. Dabei wird darauf eingegangen, aus welchem Tool oder welcher Quelle die Informationen gewonnen werden, wie die Funktionen im Bot Plugin umgesetzt sind und wie die Ausgabe erfolgt. Befehle sind dabei kursiv dargestellt und Parameter in spitzen Klammern. In den Code Listings wird das Beispielobjekt \textit{mylittleserver verwendet}.
+Die Umsetzung oder geplante Umsetzung der funktionalen Anforderungen wird im Folgenden einzeln beschrieben. Wenn mehrere Anforderungen durch eine Funktion abgedeckt werden können, sind diese in einem Punkt zusammengefasst. Dabei wird darauf eingegangen, aus welchem Tool oder welcher Quelle die Informationen gewonnen werden, wie die Funktionen im Bot Plug-in umgesetzt sind und wie die Ausgabe erfolgt. Befehle sind dabei kursiv dargestellt und Parameter in spitzen Klammern. In den Code Listings wird das Beispielobjekt \textit{mylittleserver verwendet}.
 
 \subsection{Suchfunktion}
 Die Suche nach Objekten wird über die \textit{idoitcli search <Suchbegriff>} Funktion realisiert. Analog dazu wurde das Bot Kommando \textit{!cmdb search <Suchbegriff>} implementiert. Die Ausgabe wird dabei zur besseren Lesbarkeit formatiert (\autoref{cmdbsearch}). Bei leerem Suchstring erfolgt \textit{None} als Ausgabe. Die Funktion \textit{clirun} ist der Wrapper für das idoitcli binary.
@@ -200,7 +200,7 @@ Eine mögliche Syntax für diese Funktion könnte \textit{!cmdb report <Reportna
 %\todo{Täglicher Export -> Abruf über Bot}
 
 \subsection{Ressourcen}
-Um die Ressourcenauslastung eines Geräts zu ermitteln, können die Kategorien \textit{Memory} und \textit{CPU} eines Objekts per \textit{idoitcli read <Servername>} abgefragt werden (\autoref{resources}). Im Bot Plugin ist diese Funktion per \textit{!cmdb load <Servername>} abrufbar. 
+Um die Ressourcenauslastung eines Geräts zu ermitteln, können die Kategorien \textit{Memory} und \textit{CPU} eines Objekts per \textit{idoitcli read <Servername>} abgefragt werden (\autoref{resources}). Im Bot Plug-in ist diese Funktion per \textit{!cmdb load <Servername>} abrufbar. 
 
 \begin{lstlisting}[language=bash, label=resources, caption=Ressourcenauslastung eines Geräts]
 idoitcli read mylittleserver/Memory
