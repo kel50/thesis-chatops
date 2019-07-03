@@ -161,7 +161,7 @@ def search(term):
 
 \subsection{Nächste freie IP}
 Die Suche nach der nächsten freien IP wird mit der Funktion \textit{idoitcli nextip <Netz>} realisiert und ist mit \textit{!cmdb nextip <Netz>} abrufbar. Wenn ähnlich wie beim IVZ die ersten Adressen eines Netzes für Infrastruktur reserviert sein sollen, muss darauf geachtet werden, dass diese auch in der \acs{CMDB} 
-entsprechend blockiert sind. Die \textit{nextip} Funktion gibt die erste Adresse aus, der kein Objekt zugewiesen ist.
+entsprechend blockiert sind. Die \textit{nextip} Funktion gibt die erste Adresse aus, der kein Objekt zugewiesen ist (\autoref{nextip}).
 
 \begin{lstlisting}[language=python, label=nextip, caption=Nächste freie IP]
 @botcmd
